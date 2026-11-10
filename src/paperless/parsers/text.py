@@ -40,7 +40,7 @@ _SUPPORTED_MIME_TYPES: dict[str, str] = {
 
 
 class TextDocumentParser:
-    """Parse plain-text documents (txt, csv) for Paperless-ngx.
+    """Parse plain-text documents (txt, csv) for Sense DMS.
 
     This parser reads the file content directly as UTF-8 text and renders a
     simple thumbnail using Pillow.  It does not perform OCR and does not
@@ -51,16 +51,16 @@ class TextDocumentParser:
     name : str
         Human-readable parser name.
     version : str
-        Semantic version string, kept in sync with Paperless-ngx releases.
+        Semantic version string, kept in sync with Sense DMS releases.
     author : str
         Maintainer name.
     url : str
         Issue tracker / source URL.
     """
 
-    name: str = "Paperless-ngx Text Parser"
+    name: str = "Sense DMS Text Parser"
     version: str = __full_version_str__
-    author: str = "Paperless-ngx Contributors"
+    author: str = "Sense DMS Contributors"
     url: str = "https://github.com/paperless-ngx/paperless-ngx"
 
     # ------------------------------------------------------------------

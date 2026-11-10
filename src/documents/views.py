@@ -1349,7 +1349,7 @@ class DocumentViewSet(
         except Exception as e:
             if "Data too long for column" in str(e):
                 logger.warning(
-                    "Detected a possible incompatible database column. See https://docs.paperless-ngx.com/troubleshooting/#convert-uuid-field",
+                    "Detected a possible incompatible database column. See https://docsdms.algosense.com/troubleshooting/#convert-uuid-field",
                 )
             logger.error(f"Error deleting document: {e!s}")
             return HttpResponseBadRequest(
@@ -3134,7 +3134,7 @@ class DocumentOperationPermissionMixin(PassUserMixin, DocumentSelectionMixin):
         description="Perform a bulk edit operation on a list of documents",
         external_docs={
             "description": "Further documentation",
-            "url": "https://docs.paperless-ngx.com/api/#bulk-editing",
+            "url": "https://docsdms.algosense.com/api/#bulk-editing",
         },
         responses={
             200: inline_serializer(
@@ -3472,7 +3472,7 @@ class RemovePasswordDocumentsView(DocumentOperationPermissionMixin):
         description="Upload a document via the API",
         external_docs={
             "description": "Further documentation",
-            "url": "https://docs.paperless-ngx.com/api/#file-uploads",
+            "url": "https://docsdms.algosense.com/api/#file-uploads",
         },
         responses={
             (200, "application/json"): OpenApiTypes.STR,
@@ -4351,7 +4351,7 @@ class UiSettingsView(GenericAPIView[Any]):
 
 @extend_schema_view(
     get=extend_schema(
-        description="Get the current version of the Paperless-NGX server",
+        description="Get the current version of the Sense DMS server",
         responses={
             (200, "application/json"): OpenApiTypes.OBJECT,
         },
@@ -5032,7 +5032,7 @@ def serve_file(
         description="Perform a bulk edit operation on a list of objects",
         external_docs={
             "description": "Further documentation",
-            "url": "https://docs.paperless-ngx.com/api/#objects",
+            "url": "https://docsdms.algosense.com/api/#objects",
         },
         responses={
             200: inline_serializer(
@@ -5265,7 +5265,7 @@ class CustomFieldViewSet(PermissionsAwareDocumentCountMixin, ModelViewSet[Custom
 
 @extend_schema_view(
     get=extend_schema(
-        description="Get the current system status of the Paperless-NGX server",
+        description="Get the current system status of the Sense DMS server",
         responses={
             (200, "application/json"): inline_serializer(
                 name="SystemStatus",

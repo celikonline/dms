@@ -73,9 +73,9 @@ class RasterisedDocumentParser:
     image, whether it's a PDF, or other graphical format (JPEG, TIFF, etc.)
     """
 
-    name: str = "Paperless-ngx Tesseract OCR Parser"
+    name: str = "Sense DMS Tesseract OCR Parser"
     version: str = __full_version_str__
-    author: str = "Paperless-ngx Contributors"
+    author: str = "Sense DMS Contributors"
     url: str = "https://github.com/paperless-ngx/paperless-ngx"
 
     # ------------------------------------------------------------------

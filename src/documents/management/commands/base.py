@@ -1,5 +1,5 @@
 """
-Base command class for Paperless-ngx management commands.
+Base command class for Sense DMS management commands.
 
 Provides automatic progress bar and multiprocessing support with minimal boilerplate.
 """

@@ -1182,7 +1182,7 @@
 
 ### Features / Enhancements
 
-- [Beta] Paperless-ngx v3.0.0 Beta [@shamoon](https://github.com/shamoon) ([#12713](https://github.com/paperless-ngx/paperless-ngx/pull/12713))
+- [Beta] Sense DMS v3.0.0 Beta [@shamoon](https://github.com/shamoon) ([#12713](https://github.com/paperless-ngx/paperless-ngx/pull/12713))
 - Tweakhancement (beta): allow some bulk operations with all [@shamoon](https://github.com/shamoon) ([#13193](https://github.com/paperless-ngx/paperless-ngx/pull/13193))
 - Security (beta): enforce current permissions in autocomplete [@shamoon](https://github.com/shamoon) ([#13188](https://github.com/paperless-ngx/paperless-ngx/pull/13188))
 - Security (beta): bound email linkification [@shamoon](https://github.com/shamoon) ([#13187](https://github.com/paperless-ngx/paperless-ngx/pull/13187))
@@ -1204,7 +1204,7 @@
 - Enhancement: version-aware thumbnail etag [@shamoon](https://github.com/shamoon) ([#12754](https://github.com/paperless-ngx/paperless-ngx/pull/12754))
 - Feature: Further reduce document importer memory usage [@stumpylog](https://github.com/stumpylog) ([#12707](https://github.com/paperless-ngx/paperless-ngx/pull/12707))
 - Tweakhancement: use fixed position instead of display none for printing [@shamoon](https://github.com/shamoon) ([#12706](https://github.com/paperless-ngx/paperless-ngx/pull/12706))
-- Enhancement: Paperless-ngx v3 Logo [@shamoon](https://github.com/shamoon) ([#12673](https://github.com/paperless-ngx/paperless-ngx/pull/12673))
+- Enhancement: Sense DMS v3 Logo [@shamoon](https://github.com/shamoon) ([#12673](https://github.com/paperless-ngx/paperless-ngx/pull/12673))
 - Tweakhancement: localize some more task result messages [@shamoon](https://github.com/shamoon) ([#12672](https://github.com/paperless-ngx/paperless-ngx/pull/12672))
 - Enhancement: chat message document links [@shamoon](https://github.com/shamoon) ([#12670](https://github.com/paperless-ngx/paperless-ngx/pull/12670))
 - Tweakhancement: make upload notification open an anchor link [@shamoon](https://github.com/shamoon) ([#12659](https://github.com/paperless-ngx/paperless-ngx/pull/12659))
@@ -1576,7 +1576,7 @@
 <details>
 <summary>360 changes</summary>
 
-- [Beta] Paperless-ngx v3.0.0 Beta [@shamoon](https://github.com/shamoon) ([#12713](https://github.com/paperless-ngx/paperless-ngx/pull/12713))
+- [Beta] Sense DMS v3.0.0 Beta [@shamoon](https://github.com/shamoon) ([#12713](https://github.com/paperless-ngx/paperless-ngx/pull/12713))
 - Chore (beta): mark first batch of thumbnails as priority for LCP warning [@shamoon](https://github.com/shamoon) ([#13196](https://github.com/paperless-ngx/paperless-ngx/pull/13196))
 - Fix (beta): prevent pdfjs offsetParent warning [@shamoon](https://github.com/shamoon) ([#13197](https://github.com/paperless-ngx/paperless-ngx/pull/13197))
 - Fix (beta): dont include hidden buttons in virtual scroll container height [@shamoon](https://github.com/shamoon) ([#13194](https://github.com/paperless-ngx/paperless-ngx/pull/13194))
@@ -1723,7 +1723,7 @@
 - Chore(deps): Bump the utilities-minor group across 1 directory with 9 updates @[dependabot[bot]](https://github.com/apps/dependabot) ([#12696](https://github.com/paperless-ngx/paperless-ngx/pull/12696))
 - Chore(deps): Bump ocrmypdf from 17.4.0 to 17.4.2 in the document-processing group across 1 directory @[dependabot[bot]](https://github.com/apps/dependabot) ([#12687](https://github.com/paperless-ngx/paperless-ngx/pull/12687))
 - Chore(deps-dev): Bump the development group with 2 updates @[dependabot[bot]](https://github.com/apps/dependabot) ([#12683](https://github.com/paperless-ngx/paperless-ngx/pull/12683))
-- Enhancement: Paperless-ngx v3 Logo [@shamoon](https://github.com/shamoon) ([#12673](https://github.com/paperless-ngx/paperless-ngx/pull/12673))
+- Enhancement: Sense DMS v3 Logo [@shamoon](https://github.com/shamoon) ([#12673](https://github.com/paperless-ngx/paperless-ngx/pull/12673))
 - Tweakhancement: localize some more task result messages [@shamoon](https://github.com/shamoon) ([#12672](https://github.com/paperless-ngx/paperless-ngx/pull/12672))
 - Enhancement: chat message document links [@shamoon](https://github.com/shamoon) ([#12670](https://github.com/paperless-ngx/paperless-ngx/pull/12670))
 - Fix: apply tag changes directly to document in db [@shamoon](https://github.com/shamoon) ([#12664](https://github.com/paperless-ngx/paperless-ngx/pull/12664))
@@ -5310,7 +5310,7 @@
 ### Documentation
 
 - Documentation: add detail about consumer polling behavior [@silmaril42](https://github.com/silmaril42) ([#5674](https://github.com/paperless-ngx/paperless-ngx/pull/5674))
-- Paperless-ngx Demo: new and improved [@shamoon](https://github.com/shamoon) ([#5639](https://github.com/paperless-ngx/paperless-ngx/pull/5639))
+- Sense DMS Demo: new and improved [@shamoon](https://github.com/shamoon) ([#5639](https://github.com/paperless-ngx/paperless-ngx/pull/5639))
 - Documentation: Add docs about missing timezones in MySQL/MariaDB [@Programie](https://github.com/Programie) ([#5583](https://github.com/paperless-ngx/paperless-ngx/pull/5583))
 
 ### Maintenance
@@ -5898,7 +5898,7 @@
 
 ### Please Note
 
-Exports generated in Paperless-ngx v2.0.0–2.0.1 will **not** contain consumption templates or custom fields, we recommend users upgrade to at least v2.1.
+Exports generated in Sense DMS v2.0.0–2.0.1 will **not** contain consumption templates or custom fields, we recommend users upgrade to at least v2.1.
 
 ### Bug Fixes
 
@@ -5923,7 +5923,7 @@ Exports generated in Paperless-ngx v2.0.0–2.0.1 will **not** contain consumpti
 
 ### Please Note
 
-Exports generated in Paperless-ngx v2.0.0–2.0.1 will **not** contain consumption templates or custom fields, we recommend users upgrade to at least v2.1.
+Exports generated in Sense DMS v2.0.0–2.0.1 will **not** contain consumption templates or custom fields, we recommend users upgrade to at least v2.1.
 
 ### Breaking Changes
 
@@ -6016,7 +6016,7 @@ Exports generated in Paperless-ngx v2.0.0–2.0.1 will **not** contain consumpti
 - Documentation: fix typo, add to features list [@tooomm](https://github.com/tooomm) ([#4624](https://github.com/paperless-ngx/paperless-ngx/pull/4624))
 - Documentation: Add note that trash dir must exist [@shamoon](https://github.com/shamoon) ([#4608](https://github.com/paperless-ngx/paperless-ngx/pull/4608))
 - Documentation: Structure backup sections more clearly [@quantenProjects](https://github.com/quantenProjects) ([#4559](https://github.com/paperless-ngx/paperless-ngx/pull/4559))
-- Documentation: update docs, screenshots ahead of Paperless-ngx v2.0 [@shamoon](https://github.com/shamoon) ([#4542](https://github.com/paperless-ngx/paperless-ngx/pull/4542))
+- Documentation: update docs, screenshots ahead of Sense DMS v2.0 [@shamoon](https://github.com/shamoon) ([#4542](https://github.com/paperless-ngx/paperless-ngx/pull/4542))
 - Chore: Cleanup command arguments and standardize process count handling [@stumpylog](https://github.com/stumpylog) ([#4541](https://github.com/paperless-ngx/paperless-ngx/pull/4541))
 - Add section for SELinux troubleshooting [@nachtjasmin](https://github.com/nachtjasmin) ([#4528](https://github.com/paperless-ngx/paperless-ngx/pull/4528))
 - Documentation: clarify document_exporter includes settings [@coaxial](https://github.com/coaxial) ([#4533](https://github.com/paperless-ngx/paperless-ngx/pull/4533))
@@ -7057,7 +7057,7 @@ Exports generated in Paperless-ngx v2.0.0–2.0.1 will **not** contain consumpti
 ## paperless-ngx 1.12.2
 
 _Note: Version 1.12.x introduced searching of comments which will work for comments added after the upgrade but a reindex of the search index is required in order to be able to search
-older comments. The Docker image will automatically perform this reindex, bare metal installations will have to perform this manually, see [the docs](https://docs.paperless-ngx.com/administration/#index)._
+older comments. The Docker image will automatically perform this reindex, bare metal installations will have to perform this manually, see [the docs](https://docsdms.algosense.com/administration/#index)._
 
 ### Bug Fixes
 
@@ -7621,7 +7621,7 @@ Versions 1.11.1 and 1.11.2 contain bug fixes from v1.11.0 that prevented use of 
 
 ### Documentation
 
-- [Beta] Paperless-ngx v1.9.0 Release Candidate [@stumpylog](https://github.com/stumpylog) ([#1560](https://github.com/paperless-ngx/paperless-ngx/pull/1560))
+- [Beta] Sense DMS v1.9.0 Release Candidate [@stumpylog](https://github.com/stumpylog) ([#1560](https://github.com/paperless-ngx/paperless-ngx/pull/1560))
 - docs/configuration: Fix binary variable defaults [@erikarvstedt](https://github.com/erikarvstedt) ([#1528](https://github.com/paperless-ngx/paperless-ngx/pull/1528))
 - Info about installing on subpath [@viktor-c](https://github.com/viktor-c) ([#1350](https://github.com/paperless-ngx/paperless-ngx/pull/1350))
 - Docs: move scanner \& software recs to GH wiki [@shamoon](https://github.com/shamoon) ([#1482](https://github.com/paperless-ngx/paperless-ngx/pull/1482))
@@ -7638,7 +7638,7 @@ Versions 1.11.1 and 1.11.2 contain bug fixes from v1.11.0 that prevented use of 
 
 ### Maintenance
 
-- [Beta] Paperless-ngx v1.9.0 Release Candidate [@stumpylog](https://github.com/stumpylog) ([#1560](https://github.com/paperless-ngx/paperless-ngx/pull/1560))
+- [Beta] Sense DMS v1.9.0 Release Candidate [@stumpylog](https://github.com/stumpylog) ([#1560](https://github.com/paperless-ngx/paperless-ngx/pull/1560))
 - paperless_cmd.sh: use exec to run supervisord [@lemmi](https://github.com/lemmi) ([#1617](https://github.com/paperless-ngx/paperless-ngx/pull/1617))
 - Chore: Extended container image cleanup [@stumpylog](https://github.com/stumpylog) ([#1556](https://github.com/paperless-ngx/paperless-ngx/pull/1556))
 - Chore: Smaller library images [@stumpylog](https://github.com/stumpylog) ([#1546](https://github.com/paperless-ngx/paperless-ngx/pull/1546))
@@ -7698,7 +7698,7 @@ Versions 1.11.1 and 1.11.2 contain bug fixes from v1.11.0 that prevented use of 
 
 ### All App Changes
 
-- [Beta] Paperless-ngx v1.9.0 Release Candidate [@stumpylog](https://github.com/stumpylog) ([#1560](https://github.com/paperless-ngx/paperless-ngx/pull/1560))
+- [Beta] Sense DMS v1.9.0 Release Candidate [@stumpylog](https://github.com/stumpylog) ([#1560](https://github.com/paperless-ngx/paperless-ngx/pull/1560))
 - Feature: Faster, less memory barcode handling [@stumpylog](https://github.com/stumpylog) ([#1594](https://github.com/paperless-ngx/paperless-ngx/pull/1594))
 - Fix: Consume directory permissions were not updated [@stumpylog](https://github.com/stumpylog) ([#1605](https://github.com/paperless-ngx/paperless-ngx/pull/1605))
 - Fix: Double barcode separation creates empty file [@stumpylog](https://github.com/stumpylog) ([#1596](https://github.com/paperless-ngx/paperless-ngx/pull/1596))
@@ -9292,7 +9292,7 @@ primarily.
   `overrides.js` in the root of your media directory. Thanks to [Mark
   McFate](https://github.com/SummittDweller) for this idea:
   [#371](https://github.com/the-paperless-project/paperless/issues/371)~~
-  (Not supported by Paperless-ngx)
+  (Not supported by Sense DMS)
 
 ### 2.0.0
 

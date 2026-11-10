@@ -54,7 +54,7 @@ appropriate data.
 
 ### Automatic matching {#automatic-matching}
 
-Paperless-ngx comes with a new matching algorithm called _Auto_. This
+Sense DMS comes with a new matching algorithm called _Auto_. This
 matching algorithm tries to assign tags, correspondents, document types,
 and storage paths to your documents based on how you have already
 assigned these on existing documents. It uses a neural network under the
@@ -99,7 +99,7 @@ when using this feature:
 
 ## AI features {#ai-features}
 
-Paperless-ngx includes a set of optional features backed by a large language model
+Sense DMS includes a set of optional features backed by a large language model
 (LLM): AI-assisted suggestions, similar-document retrieval, and a document chat. They
 are **off by default** and never replace the built-in, non-LLM
 [matching and suggestions](#matching).
@@ -135,7 +135,7 @@ for suggested generation and embedding models.
 
 ### AI-assisted suggestions
 
-With AI enabled, Paperless-ngx can suggest a title, tags, correspondent, document type,
+With AI enabled, Sense DMS can suggest a title, tags, correspondent, document type,
 storage path and dates by sending the document to the LLM using "Suggest" button on the document
 detail page. You can choose which type of suggestions are requested by default under Settings >
 Documents, either ML (classifier-based) suggestions, AI suggestions, or both. When both are requested
@@ -182,7 +182,7 @@ drew from.
 ### AI Security notes
 
 - Document content is passed to the LLM as **untrusted data**.
-- By default Paperless-ngx allows AI endpoints that resolve to private/loopback addresses
+- By default Sense DMS allows AI endpoints that resolve to private/loopback addresses
   (for local backends). Set
   [`PAPERLESS_AI_LLM_ALLOW_INTERNAL_ENDPOINTS`](configuration.md#PAPERLESS_AI_LLM_ALLOW_INTERNAL_ENDPOINTS)
   to `false` to block them.
@@ -815,7 +815,7 @@ services:
 
 ## Installing third-party parser plugins {#parser-plugins}
 
-Third-party parser plugins extend Paperless-ngx to support additional file
+Third-party parser plugins extend Sense DMS to support additional file
 formats. A plugin is a Python package that advertises itself under the
 `paperless_ngx.parsers` entry point group. Refer to the
 [developer documentation](development.md#making-custom-parsers) for how to
@@ -824,7 +824,7 @@ create one, or see the wiki for a community-maintained list of
 
 !!! warning "Third-party plugins are not officially supported"
 
-    The Paperless-ngx maintainers do not provide support for third-party
+    The Sense DMS maintainers do not provide support for third-party
     plugins. Issues caused by or requiring changes to a third-party plugin
     will be closed without further investigation. Always reproduce problems
     with all plugins removed before filing a bug report.
@@ -853,11 +853,11 @@ services:
 ```
 
 The script runs as `root` before the webserver starts, so the package will be
-available when Paperless-ngx discovers plugins at startup.
+available when Sense DMS discovers plugins at startup.
 
 ### Bare metal
 
-Install the package into the same Python environment that runs Paperless-ngx.
+Install the package into the same Python environment that runs Sense DMS.
 If you followed the standard bare-metal install guide, that is the `paperless`
 user's environment:
 
@@ -873,7 +873,7 @@ uv pip install my-paperless-parser-package
 pip install my-paperless-parser-package
 ```
 
-Restart all Paperless-ngx services after installation so the new plugin is
+Restart all Sense DMS services after installation so the new plugin is
 discovered.
 
 ### Verifying installation
@@ -914,7 +914,7 @@ existing tables) with:
 !!! warning
 
     Using mariadb version 10.4+ is recommended. Using the `utf8mb3` character set on
-    an older system may fix issues that can arise while setting up Paperless-ngx but
+    an older system may fix issues that can arise while setting up Sense DMS but
     `utf8mb3` can cause issues with consumption (where `utf8mb4` does not).
 
 For more information on this topic, you can refer to [this](https://code.djangoproject.com/ticket/9682) Django issue.
@@ -1095,9 +1095,9 @@ whatever else was on the backside of the split marker page.) You can work around
 a split marker page that has the split barcode on _both_ sides. This way, the extra page will
 get automatically removed.
 
-## SSO and third party authentication with Paperless-ngx
+## SSO and third party authentication with Sense DMS
 
-Paperless-ngx has a built-in authentication system from Django but you can easily integrate an
+Sense DMS has a built-in authentication system from Django but you can easily integrate an
 external authentication solution using one of the following methods:
 
 ### Remote User authentication
@@ -1110,14 +1110,14 @@ and [PAPERLESS_LOGOUT_REDIRECT_URL](configuration.md#PAPERLESS_LOGOUT_REDIRECT_U
 
 ### OpenID Connect and social authentication
 
-Version 2.5.0 of Paperless-ngx added support for integrating other authentication systems via
+Version 2.5.0 of Sense DMS added support for integrating other authentication systems via
 the [django-allauth](https://github.com/pennersr/django-allauth) package. Once set up, users
 can either log in or (optionally) sign up using any third party systems you integrate. See the
 relevant [configuration settings](configuration.md#PAPERLESS_SOCIALACCOUNT_PROVIDERS) and
 [django-allauth docs](https://docs.allauth.org/en/latest/socialaccount/configuration.html)
 for more information.
 
-To associate an existing Paperless-ngx account with a social account, first login with your
+To associate an existing Sense DMS account with a social account, first login with your
 regular credentials and then choose "My Profile" from the user dropdown in the app and you
 will see options to connect social account(s). If enabled, signup options will be available
 on the login page.
@@ -1147,7 +1147,7 @@ redirected with the [PAPERLESS_REDIRECT_LOGIN_TO_SSO](configuration.md#PAPERLESS
 
 ## Decryption of encrypted emails before consumption {#gpg-decryptor}
 
-Paperless-ngx can be configured to decrypt gpg encrypted emails before consumption.
+Sense DMS can be configured to decrypt gpg encrypted emails before consumption.
 
 ### Requirements
 

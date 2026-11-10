@@ -2,7 +2,7 @@
 
 ## Pre-Requisites
 
-Upgrading to Paperless-ngx v3 can only be performed from version 2.20.15. If you are running an older version, please upgrade to v2.20.15 before proceeding with the v3 upgrade.
+Upgrading to Sense DMS v3 can only be performed from version 2.20.15. If you are running an older version, please upgrade to v2.20.15 before proceeding with the v3 upgrade.
 
 ## Secret Key is Now Required
 
@@ -43,7 +43,7 @@ separating the directory ignore from the file ignore.
 
 ## Duplicate Handling Changes
 
-Paperless-ngx v3 no longer rejects duplicate documents by default. Instead, it now allows duplicates but adds a way to identify them via the UI. To (re-)enable duplicate rejection, set `PAPERLESS_CONSUMER_DELETE_DUPLICATES=true` in your environment.
+Sense DMS v3 no longer rejects duplicate documents by default. Instead, it now allows duplicates but adds a way to identify them via the UI. To (re-)enable duplicate rejection, set `PAPERLESS_CONSUMER_DELETE_DUPLICATES=true` in your environment.
 
 ## Encryption Support
 

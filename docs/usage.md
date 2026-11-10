@@ -4,8 +4,8 @@ title: Basic Usage
 
 # Usage
 
-Paperless-ngx is an application that manages your personal documents. With
-the (optional) help of a document scanner (see [the scanners wiki](https://github.com/paperless-ngx/paperless-ngx/wiki/Scanner-&-Software-Recommendations)), Paperless-ngx transforms your unwieldy
+Sense DMS is an application that manages your personal documents. With
+the (optional) help of a document scanner (see [the scanners wiki](https://github.com/paperless-ngx/paperless-ngx/wiki/Scanner-&-Software-Recommendations)), Sense DMS transforms your unwieldy
 physical documents into a searchable archive and provides many utilities
 for finding and managing your documents.
 
@@ -48,12 +48,12 @@ Each document has data fields that you can assign to them:
 - The _content_ of a document is the text that was OCR'ed from the
   document. This text is fed into the search engine and is used for
   matching tags, correspondents and document types.
-- Paperless-ngx also supports _custom fields_ which can be used to
+- Sense DMS also supports _custom fields_ which can be used to
   store additional metadata about a document.
 
 ## The Web UI
 
-The web UI is the primary way to interact with Paperless-ngx. It is a
+The web UI is the primary way to interact with Sense DMS. It is a
 single-page application that is built with modern web technologies and
 is designed to be fast and responsive. The web UI includes a robust
 interface for filtering, viewing, searching and editing documents.
@@ -69,7 +69,7 @@ some of the key features of the web UI and can be useful for new users.
 The dashboard is the first page you see when you log in. By default, it
 does not show any documents, but you can add saved views to the dashboard
 to show documents that match certain criteria. The dashboard also includes
-a button to upload documents to Paperless-ngx but you can also drag and
+a button to upload documents to Sense DMS but you can also drag and
 drop files anywhere in the app to initiate the consumption process.
 
 ### Document List
@@ -106,14 +106,14 @@ Think of versions as **file history** for a document.
 
 ### Management Lists
 
-Paperless-ngx includes management lists for tags, correspondents, document types
+Sense DMS includes management lists for tags, correspondents, document types
 and more. These areas allow you to view, add, edit, delete and manage permissions
 for these objects. You can also manage saved views, mail accounts, mail rules,
 workflows and more from the management sections.
 
 ### Nested Tags
 
-Paperless-ngx v2.19 introduces support for nested tags, allowing you to create a
+Sense DMS v2.19 introduces support for nested tags, allowing you to create a
 hierarchy of tags, which may be useful for organizing your documents. Tags can
 have a 'parent' tag, creating a tree-like structure, to a maximum depth of 5. When
 a tag is added to a document, all of its parent tags are also added automatically
@@ -121,7 +121,7 @@ and similarly, when a tag is removed from a document, all of its child tags are
 also removed. Additionally, assigning a parent to an existing tag will automatically
 update all documents that have this tag assigned, adding the parent tag as well.
 
-## Adding documents to Paperless-ngx
+## Adding documents to Sense DMS
 
 Once you've got Paperless setup, you need to start feeding documents
 into it. When adding documents to paperless, it will perform the
@@ -150,7 +150,7 @@ following operations on your documents:
     mail and will never overwrite that document (except when using certain
     document actions, which make that clear). Archived versions are
     stored alongside the original versions. Any files found in the
-    consumption directory will stored inside the Paperless-ngx file
+    consumption directory will stored inside the Sense DMS file
     structure and will not be retained in the consumption directory.
 
 ### The consumption directory
@@ -161,7 +161,7 @@ for new additions to this directory. When it finds them,
 the consumer goes about the process of parsing them with the OCR,
 indexing what it finds, and storing it in the media directory. You should
 think of this folder as a temporary location, as files will be re-created
-inside Paperless-ngx and removed from the consumption folder.
+inside Sense DMS and removed from the consumption folder.
 
 Getting stuff into this directory is up to you. If you're running
 Paperless on your local computer, you might just want to drag and drop
@@ -176,7 +176,7 @@ Typically, you're looking at an FTP server like
 
     Files found in the consumption directory that are consumed will be
     removed from the consumption directory and stored inside the
-    Paperless-ngx file structure using any settings / storage paths
+    Sense DMS file structure using any settings / storage paths
     you have specified. This action is performed as safely as possible
     but this means it is expected that files in the consumption
     directory will no longer exist (there) after being consumed.
@@ -190,7 +190,7 @@ process.
 ### Mobile upload {#usage-mobile_upload}
 
 Please see [the wiki](https://github.com/paperless-ngx/paperless-ngx/wiki/Related-Projects) for a user-maintained list of related projects and
-software (e.g. for mobile devices) that is compatible with Paperless-ngx.
+software (e.g. for mobile devices) that is compatible with Sense DMS.
 
 ### Incoming Email {#incoming-mail}
 
@@ -281,15 +281,15 @@ configured via [`PAPERLESS_EMAIL_TASK_CRON`](configuration.md#PAPERLESS_EMAIL_TA
 
 #### Processed Mail
 
-Paperless keeps track of emails it has processed in order to avoid processing the same mail multiple times. This uses the message `UID` provided by the mail server, which should be unique for each message. You can view and manage processed mails from the web UI under Mail > Processed Mails. If you need to re-process a message, you can delete the corresponding processed mail entry, which will allow Paperless-ngx to process the email again the next time the mail fetch task runs.
+Paperless keeps track of emails it has processed in order to avoid processing the same mail multiple times. This uses the message `UID` provided by the mail server, which should be unique for each message. You can view and manage processed mails from the web UI under Mail > Processed Mails. If you need to re-process a message, you can delete the corresponding processed mail entry, which will allow Sense DMS to process the email again the next time the mail fetch task runs.
 
 #### OAuth Email Setup
 
-Paperless-ngx supports OAuth2 authentication for Gmail and Outlook email accounts. To set up an email account with OAuth2, you will need to create a 'developer' app with the respective provider and obtain the client ID and client secret and set the appropriate [configuration variables](configuration.md#email_oauth). You will also need to set either [`PAPERLESS_OAUTH_CALLBACK_BASE_URL`](configuration.md#PAPERLESS_OAUTH_CALLBACK_BASE_URL) or [`PAPERLESS_URL`](configuration.md#PAPERLESS_URL) to the correct value for the OAuth2 flow to work correctly.
+Sense DMS supports OAuth2 authentication for Gmail and Outlook email accounts. To set up an email account with OAuth2, you will need to create a 'developer' app with the respective provider and obtain the client ID and client secret and set the appropriate [configuration variables](configuration.md#email_oauth). You will also need to set either [`PAPERLESS_OAUTH_CALLBACK_BASE_URL`](configuration.md#PAPERLESS_OAUTH_CALLBACK_BASE_URL) or [`PAPERLESS_URL`](configuration.md#PAPERLESS_URL) to the correct value for the OAuth2 flow to work correctly.
 
 Specific instructions for setting up the required 'developer' app with Google or Microsoft are beyond the scope of this documentation, but you can find user-maintained instructions in [the wiki](https://github.com/paperless-ngx/paperless-ngx/wiki/Email-OAuth-App-Setup) or by searching the web.
 
-Once setup, navigating to the email settings page in Paperless-ngx will allow you to add an email account for Gmail or Outlook using OAuth2. After authenticating, you will be presented with the newly-created account where you will need to enter and save your email address. After this, the account will work as any other email account in Paperless-ngx and refreshing tokens will be handled automatically.
+Once setup, navigating to the email settings page in Sense DMS will allow you to add an email account for Gmail or Outlook using OAuth2. After authenticating, you will be presented with the newly-created account where you will need to enter and save your email address. After this, the account will work as any other email account in Sense DMS and refreshing tokens will be handled automatically.
 
 ### REST API
 
@@ -298,7 +298,7 @@ for details.
 
 ### Duplicate documents
 
-By default, Paperless-ngx **does not reject duplicates**. If you consume a file whose
+By default, Sense DMS **does not reject duplicates**. If you consume a file whose
 contents match an existing document (same original or archive checksum), the new copy is
 still consumed and a warning is logged.
 
@@ -314,17 +314,17 @@ a "Document already exists" message linking to the existing document.
 
 ## Document Suggestions
 
-Paperless-ngx can suggest tags, correspondents, document types and storage paths for documents based on the content of the document. This is done using a (non-LLM) machine learning model that is trained on the documents in your database. The suggestions are shown in the document detail page and can be accepted or rejected by the user.
+Sense DMS can suggest tags, correspondents, document types and storage paths for documents based on the content of the document. This is done using a (non-LLM) machine learning model that is trained on the documents in your database. The suggestions are shown in the document detail page and can be accepted or rejected by the user.
 
 Suggestions are requested automatically when you open a document that still has an inbox tag. To only request them by pressing the "Suggest" button instead, turn off "Automatically request suggestions for inbox documents" under Settings > Documents.
 
 ## AI Features
 
-Paperless-ngx includes several features that use AI to enhance the document management experience. These features are optional and can be enabled or disabled in the settings. If you are using the AI features, you may want to also enable the "LLM index" feature, which supports Retrieval-Augmented Generation (RAG) designed to improve the quality of AI responses. The LLM index feature is not enabled by default and requires additional configuration.
+Sense DMS includes several features that use AI to enhance the document management experience. These features are optional and can be enabled or disabled in the settings. If you are using the AI features, you may want to also enable the "LLM index" feature, which supports Retrieval-Augmented Generation (RAG) designed to improve the quality of AI responses. The LLM index feature is not enabled by default and requires additional configuration.
 
 !!! warning
 
-    Remember that Paperless-ngx will send document content to the AI provider you have configured,
+    Remember that Sense DMS will send document content to the AI provider you have configured,
     so consider the privacy implications of using these features, especially if using a remote
     model or API provider instead of the default local model.
 
@@ -334,7 +334,7 @@ See [AI features](advanced_usage.md#ai-features) for how to enable and configure
 
 ### AI-Enhanced Suggestions
 
-If enabled, Paperless-ngx can use an AI LLM model to suggest document titles, dates, tags,
+If enabled, Sense DMS can use an AI LLM model to suggest document titles, dates, tags,
 correspondents and document types for documents. This feature will always be "opt-in" and does not
 disable the existing classifier-based suggestion system. Currently, both remote
 (via OpenAI-compatible APIs) and local (via Ollama) models are supported, see
@@ -342,11 +342,11 @@ disable the existing classifier-based suggestion system. Currently, both remote
 
 ### Document Chat
 
-Paperless-ngx can use an AI LLM model to answer questions about a document or across multiple documents. Again, this feature works best when RAG is enabled. The chat feature is available in the upper app toolbar and will switch between chatting across multiple documents or a single document based on the current view.
+Sense DMS can use an AI LLM model to answer questions about a document or across multiple documents. Again, this feature works best when RAG is enabled. The chat feature is available in the upper app toolbar and will switch between chatting across multiple documents or a single document based on the current view.
 
-## Sharing documents from Paperless-ngx
+## Sharing documents from Sense DMS
 
-Paperless-ngx supports sharing documents with other users by assigning them [permissions](#object-permissions)
+Sense DMS supports sharing documents with other users by assigning them [permissions](#object-permissions)
 to the document. Document files can also be shared externally via [share links](#share-links), [email](#email-sharing)
 or using [email](#workflow-action-email) or [webhook](#workflow-action-webhook) actions in workflows.
 
@@ -359,7 +359,7 @@ or using [email](#workflow-action-email) or [webhook](#workflow-action-webhook) 
 - Links can optionally have an expiration time set.
 - After a link expires or is deleted users will be redirected to the regular paperless-ngx login.
 - From the document detail screen you can create a share link for that single document.
-- From the bulk editor you can create a **share link bundle** for any selection. Paperless-ngx prepares a ZIP archive in the background and exposes a single share link. You can revisit the "Manage share link bundles" dialog to monitor progress, retry failed bundles, or delete links.
+- From the bulk editor you can create a **share link bundle** for any selection. Sense DMS prepares a ZIP archive in the background and exposes a single share link. You can revisit the "Manage share link bundles" dialog to monitor progress, retry failed bundles, or delete links.
 
 !!! tip
 
@@ -367,13 +367,13 @@ or using [email](#workflow-action-email) or [webhook](#workflow-action-webhook) 
 
 ### Email Sharing {#email-sharing}
 
-Paperless-ngx supports directly sending documents via email. If an email server has been [configured](configuration.md#email-sending)
+Sense DMS supports directly sending documents via email. If an email server has been [configured](configuration.md#email-sending)
 the "Send" button on the document detail page will include an "Email" option. You can also share files via email automatically by using
 a [workflow action](#workflow-action-email).
 
 ## Permissions
 
-Permissions in Paperless-ngx are based around ['global' permissions](#global-permissions) as well as
+Permissions in Sense DMS are based around ['global' permissions](#global-permissions) as well as
 ['object-level' permissions](#object-permissions). Global permissions determine which parts of the
 application a user can access (e.g. Documents, Tags, Settings) and object-level determine which
 objects are visible or editable. All objects have an 'owner' and 'view' and 'edit' permissions which
@@ -399,7 +399,7 @@ Documents consumed via the consumption directory do not have an owner or additio
 
 ### Users and Groups
 
-Paperless-ngx supports editing users and groups via the 'frontend' UI, which can be found under
+Sense DMS supports editing users and groups via the 'frontend' UI, which can be found under
 Settings > Users & Groups, assuming the user has access. If a user is designated
 as a member of a group those permissions will be inherited and this is reflected in the UI. Explicit
 permissions can be granted to limit access to certain parts of the UI (and corresponding API endpoints).
@@ -472,7 +472,7 @@ Users can enable two-factor authentication (2FA) for their accounts from the 'My
 
 Should a user lose access to their 2FA device and all recovery codes, a superuser can disable 2FA for the user from the 'Users & Groups' management screen.
 
-If users log in via an OpenID Connect provider which already enforces multi-factor authentication, see [`PAPERLESS_SOCIAL_ACCOUNT_MFA_TRUSTED_AMR`](configuration.md#PAPERLESS_SOCIAL_ACCOUNT_MFA_TRUSTED_AMR) to skip the Paperless-ngx prompt for those logins.
+If users log in via an OpenID Connect provider which already enforces multi-factor authentication, see [`PAPERLESS_SOCIAL_ACCOUNT_MFA_TRUSTED_AMR`](configuration.md#PAPERLESS_SOCIAL_ACCOUNT_MFA_TRUSTED_AMR) to skip the Sense DMS prompt for those logins.
 
 ## Workflows
 
@@ -480,7 +480,7 @@ If users log in via an OpenID Connect provider which already enforces multi-fact
 
     v2.3 added "Workflows" and existing "Consumption Templates" were converted automatically to the new more powerful format.
 
-Workflows allow hooking into the Paperless-ngx document pipeline, for example to alter what metadata (tags, doc types) and
+Workflows allow hooking into the Sense DMS document pipeline, for example to alter what metadata (tags, doc types) and
 permissions (owner, privileges) are assigned to documents. Workflows can have multiple 'triggers' and 'actions'. Triggers
 are events (with optional filtering rules) that will cause the workflow to be run and actions are the set of sequential
 actions to apply.
@@ -530,7 +530,7 @@ flowchart TD
     consumption --> |Yes| C[Workflow Actions Run]
     consumption --> |No| D
     C --> D[Document Added]
-    D -- Paperless-ngx 'matching' of tags, etc. --> added
+    D -- Sense DMS 'matching' of tags, etc. --> added
     added --> |Yes| F[Workflow Actions Run]
     added --> |No| G
     F --> G[Document Finalized]
@@ -764,9 +764,9 @@ documents (and superusers who can always access all parts of the app).
 
 ## Custom Fields {#custom-fields}
 
-Paperless-ngx supports the use of custom fields for documents as of v2.0, allowing a user
+Sense DMS supports the use of custom fields for documents as of v2.0, allowing a user
 to optionally attach data to documents which does not fit in the existing set of fields
-Paperless-ngx provides.
+Sense DMS provides.
 
 1. First, create a custom field (under "Manage"), with a given name and data type. This could be something like "Invoice Number" or "Date Paid", with a data type of "Number", "Date", "String", etc.
 2. Once created, a field can be used with documents and data stored. To do so, use the "Custom Fields" menu on the document detail page, choose your existing field from the dropdown. Once the field is visible in the form you can enter the appropriate data which will be validated according to the custom field "data type".
@@ -797,7 +797,7 @@ The following custom field types are supported:
 
 ## PDF Actions
 
-Paperless-ngx supports basic editing operations for PDFs (these operations currently cannot be performed on non-PDF files). When viewing an individual document you can
+Sense DMS supports basic editing operations for PDFs (these operations currently cannot be performed on non-PDF files). When viewing an individual document you can
 open the 'PDF Editor' to use a simple UI for re-arranging, rotating, deleting pages and splitting documents.
 
 - Merging documents: available when selecting multiple documents for 'bulk editing'.
@@ -808,11 +808,11 @@ open the 'PDF Editor' to use a simple UI for re-arranging, rotating, deleting pa
 
 !!! important
 
-    Note that rotation and deleting pages alter the Paperless-ngx _original_ file, which would, for example, invalidate a digital signature.
+    Note that rotation and deleting pages alter the Sense DMS _original_ file, which would, for example, invalidate a digital signature.
 
 ## Document History
 
-As of version 2.7, Paperless-ngx automatically records all changes to a document and records this in an audit log. The feature requires [`PAPERLESS_AUDIT_LOG_ENABLED`](configuration.md#PAPERLESS_AUDIT_LOG_ENABLED) be enabled, which it is by default as of version 2.7.
+As of version 2.7, Sense DMS automatically records all changes to a document and records this in an audit log. The feature requires [`PAPERLESS_AUDIT_LOG_ENABLED`](configuration.md#PAPERLESS_AUDIT_LOG_ENABLED) be enabled, which it is by default as of version 2.7.
 Changes to documents are visible under the "History" tab. Note that certain changes such as those made by workflows, record the 'actor'
 as "System".
 
@@ -900,7 +900,7 @@ collection.
 ### Global search
 
 The top search bar in the web UI performs a "global" search of the various
-objects Paperless-ngx uses, including documents, tags, workflows, etc. Only
+objects Sense DMS uses, including documents, tags, workflows, etc. Only
 objects for which the user has appropriate permissions are returned. For
 documents, if there are < 3 results, "advanced" search results (which use
 the document index) will also be included. This can be disabled under settings.
@@ -1087,7 +1087,7 @@ All of these can be combined. Syntax not described here may not work as expected
 
 A list of available hotkeys can be shown on any page using <kbd>Shift</kbd> +
 <kbd>?</kbd>. The help dialog shows only the keys that are currently available
-based on which area of Paperless-ngx you are using.
+based on which area of Sense DMS you are using.
 
 ## The recommended workflow {#usage-recommended-workflow}
 
@@ -1194,10 +1194,10 @@ how regularly you intend to scan documents and use paperless.
 
     This feature is disabled by default and will always remain strictly "opt-in".
 
-Paperless-ngx supports performing OCR on documents using remote services. At the moment, this is limited to
+Sense DMS supports performing OCR on documents using remote services. At the moment, this is limited to
 [Microsoft's Azure "Document Intelligence" service](https://azure.microsoft.com/en-us/products/ai-services/ai-document-intelligence).
 This is of course a paid service (with a free tier) which requires an Azure account and subscription. Azure AI is not affiliated with
-Paperless-ngx in any way. When enabled, Paperless-ngx will automatically send appropriate documents to Azure for OCR processing, bypassing
+Sense DMS in any way. When enabled, Sense DMS will automatically send appropriate documents to Azure for OCR processing, bypassing
 the local OCR engine. See the [configuration](configuration.md#PAPERLESS_REMOTE_OCR_ENGINE) options for more details. These
 settings can be supplied as environment variables or via **Application Configuration**.
 
@@ -1213,7 +1213,7 @@ Setting the mode to `workflow_only` also allows the **Reprocess** actions to sel
 
 ## Architecture
 
-Paperless-ngx consists of the following components:
+Sense DMS consists of the following components:
 
 - **The webserver:** This serves the administration pages, the API,
   and the new frontend. This is the main tool you'll be using to interact

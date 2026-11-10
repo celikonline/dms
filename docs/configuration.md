@@ -30,7 +30,7 @@ or applicable default will be utilized instead.
 
 ### Message Broker
 
-Paperless-ngx uses a Redis-compatible message broker. Any broker that
+Sense DMS uses a Redis-compatible message broker. Any broker that
 speaks the Redis protocol works here, including [Valkey](https://valkey.io/)
 (the default in the bundled Docker Compose files) and Redis itself.
 
@@ -549,7 +549,7 @@ when its IPv4 and IPv6 addresses are both listed in
 [`PAPERLESS_TRUSTED_PROXIES`](#PAPERLESS_TRUSTED_PROXIES).
 
     Only trust `X-Forwarded-For` when untrusted clients cannot connect directly
-    to Paperless-ngx.
+    to Sense DMS.
 
     Defaults to the number of entries in `PAPERLESS_TRUSTED_PROXIES`.
 
@@ -731,7 +731,7 @@ This is for use with self-signed certificates against local IMAP servers.
 
 #### [`PAPERLESS_ACCOUNT_ALLOW_SIGNUPS=<bool>`](#PAPERLESS_ACCOUNT_ALLOW_SIGNUPS) {#PAPERLESS_ACCOUNT_ALLOW_SIGNUPS}
 
-: Allow users to signup for a new Paperless-ngx account.
+: Allow users to signup for a new Sense DMS account.
 
     Defaults to False
 
@@ -763,13 +763,13 @@ system. See the corresponding
 
 #### [`PAPERLESS_SOCIALACCOUNT_ALLOW_SIGNUPS=<bool>`](#PAPERLESS_SOCIALACCOUNT_ALLOW_SIGNUPS) {#PAPERLESS_SOCIALACCOUNT_ALLOW_SIGNUPS}
 
-: Allow users to signup for a new Paperless-ngx account using any setup third party authentication systems.
+: Allow users to signup for a new Sense DMS account using any setup third party authentication systems.
 
     Defaults to True
 
 #### [`PAPERLESS_SOCIAL_ACCOUNT_SYNC_GROUPS=<bool>`](#PAPERLESS_SOCIAL_ACCOUNT_SYNC_GROUPS) {#PAPERLESS_SOCIAL_ACCOUNT_SYNC_GROUPS}
 
-: Sync groups from the third party authentication system (e.g. OIDC) to Paperless-ngx. When enabled, users will be added or removed from groups based on their group membership in the third party authentication system. Groups must already exist in Paperless-ngx and have the same name as in the third party authentication system. Groups are updated upon logging in via the third party authentication system, see the corresponding [django-allauth documentation](https://docs.allauth.org/en/dev/socialaccount/signals.html).
+: Sync groups from the third party authentication system (e.g. OIDC) to Sense DMS. When enabled, users will be added or removed from groups based on their group membership in the third party authentication system. Groups must already exist in Sense DMS and have the same name as in the third party authentication system. Groups are updated upon logging in via the third party authentication system, see the corresponding [django-allauth documentation](https://docs.allauth.org/en/dev/socialaccount/signals.html).
 
 : In order to pass groups from the authentication system you will need to update your [PAPERLESS_SOCIALACCOUNT_PROVIDERS](#PAPERLESS_SOCIALACCOUNT_PROVIDERS) setting by adding a top-level "SCOPES" setting which includes "groups", or the custom groups claim configured in [`PAPERLESS_SOCIAL_ACCOUNT_SYNC_GROUPS_CLAIM`](#PAPERLESS_SOCIAL_ACCOUNT_SYNC_GROUPS_CLAIM) e.g.:
 
@@ -787,7 +787,7 @@ system. See the corresponding
 
 #### [`PAPERLESS_SOCIAL_ACCOUNT_SYNC_SUPERUSER_GROUP=<str>`](#PAPERLESS_SOCIAL_ACCOUNT_SYNC_SUPERUSER_GROUP) {#PAPERLESS_SOCIAL_ACCOUNT_SYNC_SUPERUSER_GROUP}
 
-: Allows you to define a group name that, if present in the third-party authentication system's groups claim, will grant the user superuser (admin) and staff status in Paperless-ngx. If the group is not present in the claim, superuser status will be revoked upon next login.
+: Allows you to define a group name that, if present in the third-party authentication system's groups claim, will grant the user superuser (admin) and staff status in Sense DMS. If the group is not present in the claim, superuser status will be revoked upon next login.
 
     !!! warning
         This is a direct reflection of the claim on every login, including the connecting user, with no exemption for the last remaining admin. If the group is missing or misconfigured on the identity provider side, the logged-in user will immediately lose their own superuser access. Fix the group membership or claim mapping on the identity provider to restore it. If the identity provider itself is unreachable or misconfigured and you are locked out, you can recover admin access locally with `manage.py createsuperuser`.
@@ -796,7 +796,7 @@ system. See the corresponding
 
 #### [`PAPERLESS_SOCIAL_ACCOUNT_SYNC_STAFF_GROUP=<str>`](#PAPERLESS_SOCIAL_ACCOUNT_SYNC_STAFF_GROUP) {#PAPERLESS_SOCIAL_ACCOUNT_SYNC_STAFF_GROUP}
 
-: Allows you to define a group name that, if present in the third-party authentication system's groups claim, will grant the user staff status in Paperless-ngx. If the group is not present in the claim and the user is not a superuser, staff status will be revoked upon next login.
+: Allows you to define a group name that, if present in the third-party authentication system's groups claim, will grant the user staff status in Sense DMS. If the group is not present in the claim and the user is not a superuser, staff status will be revoked upon next login.
 
     !!! warning
         As with [`PAPERLESS_SOCIAL_ACCOUNT_SYNC_SUPERUSER_GROUP`](#PAPERLESS_SOCIAL_ACCOUNT_SYNC_SUPERUSER_GROUP), this is applied on every login unconditionally, including for the connecting user themselves.
@@ -805,7 +805,7 @@ system. See the corresponding
 
 #### [`PAPERLESS_SOCIAL_ACCOUNT_MFA_TRUSTED_AMR=<comma-separated-list>`](#PAPERLESS_SOCIAL_ACCOUNT_MFA_TRUSTED_AMR) {#PAPERLESS_SOCIAL_ACCOUNT_MFA_TRUSTED_AMR}
 
-: A list of authentication method values which, if present in the `amr` claim of the ID token sent by an OpenID Connect provider, cause Paperless-ngx to skip its own two-factor authentication prompt for that login. This avoids users having to enter a second factor twice when the identity provider already performed multi-factor authentication. Logins with a username and password, or via a provider which does not send a matching `amr` value, still require the Paperless-ngx code.
+: A list of authentication method values which, if present in the `amr` claim of the ID token sent by an OpenID Connect provider, cause Sense DMS to skip its own two-factor authentication prompt for that login. This avoids users having to enter a second factor twice when the identity provider already performed multi-factor authentication. Logins with a username and password, or via a provider which does not send a matching `amr` value, still require the Sense DMS code.
 
     Which values to trust depends entirely on your identity provider, e.g. Authelia sends `mfa` and Pocket ID sends `phr` for passkey logins (but `otp` for single-factor email codes, which should _not_ be trusted). Some providers, such as Keycloak, do not send an `amr` claim by default and need to be configured to do so. You can see what your provider sends from the Django admin as a superuser by checking `id_token` → `amr` in the "Extra data" of the social account.
 
@@ -847,7 +847,7 @@ If both the [PAPERLESS_ACCOUNT_DEFAULT_GROUPS](#PAPERLESS_ACCOUNT_DEFAULT_GROUPS
 
 #### [`PAPERLESS_DISABLE_REGULAR_LOGIN=<bool>`](#PAPERLESS_DISABLE_REGULAR_LOGIN) {#PAPERLESS_DISABLE_REGULAR_LOGIN}
 
-: Disables the regular frontend username / password login, i.e. once you have setup SSO. Note that this setting does not disable the Django admin login nor logging in with local credentials via the API. To prevent access to the Django admin, consider blocking `/admin/` in your [web server or reverse proxy configuration](https://github.com/paperless-ngx/paperless-ngx/wiki/Using-a-Reverse-Proxy-with-Paperless-ngx).
+: Disables the regular frontend username / password login, i.e. once you have setup SSO. Note that this setting does not disable the Django admin login nor logging in with local credentials via the API. To prevent access to the Django admin, consider blocking `/admin/` in your [web server or reverse proxy configuration](https://github.com/paperless-ngx/paperless-ngx/wiki/Using-a-Reverse-Proxy-with-Sense DMS).
 
     You can optionally also automatically redirect users to the SSO login with [PAPERLESS_REDIRECT_LOGIN_TO_SSO](#PAPERLESS_REDIRECT_LOGIN_TO_SSO)
 
@@ -1378,7 +1378,7 @@ via the consumption directory, you can disable the consumer to save resources.
 
 #### [`PAPERLESS_CONSUMER_DELETE_DUPLICATES=<bool>`](#PAPERLESS_CONSUMER_DELETE_DUPLICATES) {#PAPERLESS_CONSUMER_DELETE_DUPLICATES}
 
-: As of version 3.0 Paperless-ngx allows duplicate documents to be consumed by default, _except_ when
+: As of version 3.0 Sense DMS allows duplicate documents to be consumed by default, _except_ when
 this setting is enabled. When enabled, Paperless will check if a document with the same hash already
 exists in the system and delete the duplicate file from the consumption directory without consuming it.
 
@@ -1875,7 +1875,7 @@ processing. This only has an effect if
 
 #### [`PAPERLESS_SHARE_LINK_BUNDLE_CLEANUP_CRON=<cron expression>`](#PAPERLESS_SHARE_LINK_BUNDLE_CLEANUP_CRON) {#PAPERLESS_SHARE_LINK_BUNDLE_CLEANUP_CRON}
 
-: Controls how often Paperless-ngx removes expired share link bundles (and their generated ZIP archives).
+: Controls how often Sense DMS removes expired share link bundles (and their generated ZIP archives).
 
 : If set to the string "disable", expired bundles are not cleaned up automatically.
 
@@ -1895,14 +1895,14 @@ the literal path for that program.
 
 !!! warning
 
-    Deprecated and has no effect, since Paperless-ngx no longer uses
+    Deprecated and has no effect, since Sense DMS no longer uses
     ImageMagick. It will be removed in a future release.
 
 #### [`PAPERLESS_GS_BINARY=<path>`](#PAPERLESS_GS_BINARY) {#PAPERLESS_GS_BINARY}
 
 !!! warning
 
-    Deprecated and has no effect, since nothing in Paperless-ngx calls
+    Deprecated and has no effect, since nothing in Sense DMS calls
     Ghostscript by this path. It will be removed in a future release.
 
 ## Docker-specific options {#docker}
@@ -2036,7 +2036,7 @@ started by the container.
 
 #### [`PAPERLESS_APP_TITLE=<str>`](#PAPERLESS_APP_TITLE) {#PAPERLESS_APP_TITLE}
 
-: If set, overrides the default name "Paperless-ngx"
+: If set, overrides the default name "Sense DMS"
 
 #### [`PAPERLESS_APP_LOGO=<path>`](#PAPERLESS_APP_LOGO) {#PAPERLESS_APP_LOGO}
 
@@ -2203,10 +2203,10 @@ setting is required to be set to use the AI features.
     !!! note
 
         Remote AI providers may be paid services. If you use a hosted OpenAI-compatible API, you
-        are responsible for any usage charges incurred by Paperless-ngx features, and your
+        are responsible for any usage charges incurred by Sense DMS features, and your
         document data will be sent to the provider you configure.
 
-        Paperless-ngx does not endorse any specific provider. Refer to your provider's terms of
+        Sense DMS does not endorse any specific provider. Refer to your provider's terms of
         service and privacy policy, and use at your own risk.
 
 #### [`PAPERLESS_AI_LLM_MODEL=<str>`](#PAPERLESS_AI_LLM_MODEL) {#PAPERLESS_AI_LLM_MODEL}

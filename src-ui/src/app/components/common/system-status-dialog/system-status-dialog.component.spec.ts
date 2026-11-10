@@ -4,7 +4,7 @@ jest.mock('src/environments/environment', () => ({
     production: true,
     apiBaseUrl: 'http://localhost:8000/api/',
     apiVersion: '9',
-    appTitle: 'Paperless-ngx',
+    appTitle: 'Sense DMS',
     tag: 'prod',
     version: '2.4.3',
     webSocketHost: 'localhost:8000',

@@ -21,7 +21,7 @@
         <div class="brand-copy ms-2 text-truncate" [class.d-md-none]="slimSidebarEnabled">
           <span class="brand-title text-truncate">{{ appTitle }}</span>
           @if (customAppTitle) {
-            <span class="byline text-uppercase font-monospace" i18n>by Paperless-ngx</span>
+            <span class="byline text-uppercase font-monospace" i18n>by Sense DMS</span>
           }
         </div>
       }
@@ -74,7 +74,7 @@
         </a>
         <div class="dropdown-divider"></div>
         <a ngbDropdownItem class="nav-link" target="_blank" rel="noopener noreferrer"
-          href="https://docs.paperless-ngx.com">
+          href="https://docsdms.algosense.com">
           <pngx-bs-icon class="me-2" name="question-circle"></pngx-bs-icon><ng-container i18n>Documentation</ng-container>
         </a>
       </div>
@@ -363,7 +363,7 @@
             }
             <li class="nav-item mt-2 position-relative" [class.d-none]="settingsService.sidebarItemIsHidden(HideableSidebarItemID.Documentation) && !settingsService.organizingSidebarItems()" tourAnchor="tour.outro">
               <a class="text-muted small d-flex align-items-center flex-wrap text-decoration-none nav-anchor" [class.opacity-50]="settingsService.sidebarItemIsHidden(HideableSidebarItemID.Documentation)" [class.pe-5]="settingsService.organizingSidebarItems() && !slimSidebarEnabled && !slimSidebarAnimating()"
-                target="_blank" rel="noopener noreferrer" href="https://docs.paperless-ngx.com" ngbPopover="Documentation"
+                target="_blank" rel="noopener noreferrer" href="https://docsdms.algosense.com" ngbPopover="Documentation"
                 i18n-ngbPopover [disablePopover]="!slimSidebarPopoversEnabled" placement="end" container="body"
                 triggers="mouseenter:mouseleave" popoverClass="popover-slim">
                 <pngx-bs-icon class="d-flex me-2" name="question-circle"></pngx-bs-icon><span><ng-container i18n>Documentation</ng-container></span>
@@ -385,12 +385,12 @@
                 @if (!settingsService.updateCheckingIsSet || appRemoteVersion()) {
                   <div class="version-check d-flex align-items-center">
                     <ng-template #updateAvailablePopContent>
-                      <span class="small">Paperless-ngx {{ appRemoteVersion().version }} <ng-container i18n>is
+                      <span class="small">Sense DMS {{ appRemoteVersion().version }} <ng-container i18n>is
                           available.</ng-container><br /><ng-container i18n>Click to view.</ng-container></span>
                     </ng-template>
                     <ng-template #updateCheckingNotEnabledPopContent>
                       <p class="small mb-2">
-                        <ng-container i18n>Paperless-ngx can automatically check for updates</ng-container>
+                        <ng-container i18n>Sense DMS can automatically check for updates</ng-container>
                       </p>
                       <div class="btn-group btn-group-xs flex-fill w-100">
                         <button class="btn btn-outline-primary" (click)="setUpdateChecking(true)">Enable</button>

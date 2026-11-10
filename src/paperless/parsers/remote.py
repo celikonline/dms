@@ -99,7 +99,7 @@ class RemoteDocumentParser:
     name : str
         Human-readable parser name.
     version : str
-        Semantic version string, kept in sync with Paperless-ngx releases.
+        Semantic version string, kept in sync with Sense DMS releases.
     author : str
         Maintainer name.
     url : str
@@ -109,9 +109,9 @@ class RemoteDocumentParser:
         can skip this parser if remote processing was not requested.
     """
 
-    name: str = "Paperless-ngx Remote OCR Parser"
+    name: str = "Sense DMS Remote OCR Parser"
     version: str = __full_version_str__
-    author: str = "Paperless-ngx Contributors"
+    author: str = "Sense DMS Contributors"
     url: str = "https://github.com/paperless-ngx/paperless-ngx"
 
     uses_remote_service: bool = True

@@ -174,7 +174,7 @@ jobs:
         id: create-release
         uses: release-drafter/release-drafter@978bb0b30c5ee8cdd332ced253758157150d43f0 # v7.10.0
         with:
-          name: Paperless-ngx ${{ steps.get-version.outputs.version }}
+          name: Sense DMS ${{ steps.get-version.outputs.version }}
           tag: ${{ steps.get-version.outputs.version }}
           version: ${{ steps.get-version.outputs.version }}
           prerelease: ${{ steps.get-version.outputs.prerelease }}

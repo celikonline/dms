@@ -272,7 +272,7 @@ class TestDeprecatedDbSettings:
         assert warning.id == "paperless.W001"
         assert env_var in warning.hint
         assert "PAPERLESS_DB_OPTIONS" in warning.hint
-        assert "https://docs.paperless-ngx.com/migration-v3/" in warning.hint
+        assert "https://docsdms.algosense.com/migration-v3/" in warning.hint
 
     def test_multiple_deprecated_vars_produce_one_warning_each(
         self,

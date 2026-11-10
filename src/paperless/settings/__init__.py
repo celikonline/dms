@@ -215,15 +215,15 @@ FORCE_SCRIPT_NAME, BASE_URL, LOGIN_URL, LOGIN_REDIRECT_URL, LOGOUT_REDIRECT_URL 
 
 # DRF Spectacular settings
 SPECTACULAR_SETTINGS = {
-    "TITLE": "Paperless-ngx REST API",
-    "DESCRIPTION": "OpenAPI Spec for Paperless-ngx",
+    "TITLE": "Sense DMS REST API",
+    "DESCRIPTION": "OpenAPI Spec for Sense DMS",
     "VERSION": "6.0.0",
     "SERVE_INCLUDE_SCHEMA": False,
     "SWAGGER_UI_DIST": "SIDECAR",
     "COMPONENT_SPLIT_REQUEST": True,
     "EXTERNAL_DOCS": {
-        "description": "Paperless-ngx API Documentation",
-        "url": "https://docs.paperless-ngx.com/api/",
+        "description": "Sense DMS API Documentation",
+        "url": "https://docsdms.algosense.com/api/",
     },
     "ENUM_NAME_OVERRIDES": {
         "MatchingAlgorithm": "documents.models.MatchingModel.MATCHING_ALGORITHMS",
@@ -296,7 +296,7 @@ EMAIL_HOST_PASSWORD: Final[str] = os.getenv("PAPERLESS_EMAIL_HOST_PASSWORD", "")
 DEFAULT_FROM_EMAIL: Final[str] = os.getenv("PAPERLESS_EMAIL_FROM", EMAIL_HOST_USER)
 EMAIL_USE_TLS: Final[bool] = get_bool_from_env("PAPERLESS_EMAIL_USE_TLS")
 EMAIL_USE_SSL: Final[bool] = get_bool_from_env("PAPERLESS_EMAIL_USE_SSL")
-EMAIL_SUBJECT_PREFIX: Final[str] = "[Paperless-ngx] "
+EMAIL_SUBJECT_PREFIX: Final[str] = "[Sense DMS] "
 EMAIL_TIMEOUT = 30.0
 EMAIL_ENABLED = EMAIL_HOST != "localhost" or EMAIL_HOST_USER != ""
 if DEBUG:  # pragma: no cover
@@ -355,9 +355,9 @@ SOCIAL_ACCOUNT_MFA_TRUSTED_AMR = get_list_from_env(
 
 HEADLESS_TOKEN_STRATEGY = "paperless.adapter.DrfTokenStrategy"
 
-MFA_TOTP_ISSUER = "Paperless-ngx"
+MFA_TOTP_ISSUER = "Sense DMS"
 
-ACCOUNT_EMAIL_SUBJECT_PREFIX = "[Paperless-ngx] "
+ACCOUNT_EMAIL_SUBJECT_PREFIX = "[Sense DMS] "
 
 DISABLE_REGULAR_LOGIN = get_bool_from_env("PAPERLESS_DISABLE_REGULAR_LOGIN")
 REDIRECT_LOGIN_TO_SSO = get_bool_from_env("PAPERLESS_REDIRECT_LOGIN_TO_SSO")

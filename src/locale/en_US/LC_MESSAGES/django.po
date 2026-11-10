@@ -1708,7 +1708,7 @@ msgid "Documents not found: %(ids)s"
 msgstr ""
 
 #: documents/templates/account/account_inactive.html:5
-msgid "Paperless-ngx account inactive"
+msgid "Sense DMS account inactive"
 msgstr ""
 
 #: documents/templates/account/account_inactive.html:9
@@ -1736,7 +1736,7 @@ msgid ""
 msgstr ""
 
 #: documents/templates/account/login.html:5
-msgid "Paperless-ngx sign in"
+msgid "Sense DMS sign in"
 msgstr ""
 
 #: documents/templates/account/login.html:10
@@ -1780,7 +1780,7 @@ msgid "or sign in via"
 msgstr ""
 
 #: documents/templates/account/password_reset.html:5
-msgid "Paperless-ngx reset password request"
+msgid "Sense DMS reset password request"
 msgstr ""
 
 #: documents/templates/account/password_reset.html:9
@@ -1798,7 +1798,7 @@ msgid "Send me instructions!"
 msgstr ""
 
 #: documents/templates/account/password_reset_done.html:5
-msgid "Paperless-ngx reset password sent"
+msgid "Sense DMS reset password sent"
 msgstr ""
 
 #: documents/templates/account/password_reset_done.html:9
@@ -1812,7 +1812,7 @@ msgid ""
 msgstr ""
 
 #: documents/templates/account/password_reset_from_key.html:5
-msgid "Paperless-ngx reset password confirmation"
+msgid "Sense DMS reset password confirmation"
 msgstr ""
 
 #: documents/templates/account/password_reset_from_key.html:9
@@ -1836,7 +1836,7 @@ msgid "Change my password"
 msgstr ""
 
 #: documents/templates/account/password_reset_from_key_done.html:5
-msgid "Paperless-ngx reset password complete"
+msgid "Sense DMS reset password complete"
 msgstr ""
 
 #: documents/templates/account/password_reset_from_key_done.html:9
@@ -1852,7 +1852,7 @@ msgid "log in"
 msgstr ""
 
 #: documents/templates/account/signup.html:5
-msgid "Paperless-ngx sign up"
+msgid "Sense DMS sign up"
 msgstr ""
 
 #: documents/templates/account/signup.html:11
@@ -1875,7 +1875,7 @@ msgid "Password (again)"
 msgstr ""
 
 #: documents/templates/index.html:61
-msgid "Paperless-ngx is loading..."
+msgid "Sense DMS is loading..."
 msgstr ""
 
 #: documents/templates/index.html:62
@@ -1887,7 +1887,7 @@ msgid "Here's a link to the docs."
 msgstr ""
 
 #: documents/templates/mfa/authenticate.html:7
-msgid "Paperless-ngx Two-Factor Authentication"
+msgid "Sense DMS Two-Factor Authentication"
 msgstr ""
 
 #: documents/templates/mfa/authenticate.html:12
@@ -1914,7 +1914,7 @@ msgstr ""
 
 #: documents/templates/socialaccount/authentication_error.html:5
 #: documents/templates/socialaccount/login.html:5
-msgid "Paperless-ngx social account sign in"
+msgid "Sense DMS social account sign in"
 msgstr ""
 
 #: documents/templates/socialaccount/authentication_error.html:10
@@ -1937,7 +1937,7 @@ msgid "Continue"
 msgstr ""
 
 #: documents/templates/socialaccount/signup.html:5
-msgid "Paperless-ngx social account sign up"
+msgid "Sense DMS social account sign up"
 msgstr ""
 
 #: documents/templates/socialaccount/signup.html:11
@@ -2427,7 +2427,7 @@ msgid "Chinese Traditional"
 msgstr ""
 
 #: paperless/urls.py:438
-msgid "Paperless-ngx administration"
+msgid "Sense DMS administration"
 msgstr ""
 
 #: paperless_mail/admin.py:39

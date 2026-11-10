@@ -53,7 +53,7 @@ Options available to bare-metal and non-docker installations:
 
 ### Restoring {#migrating-restoring}
 
-If you've backed-up Paperless-ngx using the [document exporter](#exporter),
+If you've backed-up Sense DMS using the [document exporter](#exporter),
 restoring can simply be done with the [document importer](#importer).
 
 Of course, other backup strategies require restoring any volumes, folders and database
@@ -63,7 +63,7 @@ copies you created in the steps above.
 
 !!! warning
 
-    Please review the [migration instructions](migration-v3.md) before upgrading Paperless-ngx to v3.0, it includes some breaking changes that require manual intervention before upgrading.
+    Please review the [migration instructions](migration-v3.md) before upgrading Sense DMS to v3.0, it includes some breaking changes that require manual intervention before upgrading.
 
 !!! note
 
@@ -224,13 +224,13 @@ following:
 
 ### Database Upgrades
 
-Paperless-ngx is compatible with Django-supported versions of PostgreSQL and MariaDB and it is generally
+Sense DMS is compatible with Django-supported versions of PostgreSQL and MariaDB and it is generally
 safe to update them to newer versions. However, you should always take a backup and follow
 the instructions from your database's documentation for how to upgrade between major versions.
 
 !!! note
 
-    As of Paperless-ngx v2.18, the minimum supported version of PostgreSQL is 14.
+    As of Sense DMS v2.18, the minimum supported version of PostgreSQL is 14.
 
 For PostgreSQL, refer to [Upgrading a PostgreSQL Cluster](https://www.postgresql.org/docs/current/upgrading.html).
 
@@ -423,7 +423,7 @@ the `export` folder in your paperless source directory. Specify
 
 !!! warning
 
-    The importer should be run against a completely empty installation (database and directories) of Paperless-ngx.
+    The importer should be run against a completely empty installation (database and directories) of Sense DMS.
     If using a data only import, only the database must be empty.
 
 ### Document retagger {#retagger}
@@ -551,7 +551,7 @@ task scheduler.
 ### Managing the LLM (AI) index {#llm-index}
 
 When the [AI features](advanced_usage.md#ai-features) are enabled with an embedding
-backend, Paperless-ngx maintains a vector index of your documents used for
+backend, Sense DMS maintains a vector index of your documents used for
 Retrieval-Augmented Generation (RAG), similar-document retrieval, and document chat. The
 index is updated automatically on the schedule set by
 [`PAPERLESS_LLM_INDEX_TASK_CRON`](configuration.md#PAPERLESS_LLM_INDEX_TASK_CRON), but you
@@ -696,7 +696,7 @@ document.
 
 ### Detecting duplicates {#fuzzy_duplicate}
 
-Paperless-ngx already catches and warns of exactly matching documents,
+Sense DMS already catches and warns of exactly matching documents,
 however a new scan of an existing document may not produce an exact bit for bit
 duplicate. But the content should be exact or close, allowing detection.
 
@@ -725,7 +725,7 @@ document_fuzzy_match [--ratio] [--processes N]
 
 ### Prune history (audit log) entries {#prune-history}
 
-If the audit log is enabled Paperless-ngx keeps an audit log of all changes made to documents. Functionality to automatically remove entries for deleted documents was added but
+If the audit log is enabled Sense DMS keeps an audit log of all changes made to documents. Functionality to automatically remove entries for deleted documents was added but
 entries created prior to this are not removed. This command allows you to prune the audit log of entries that are no longer needed.
 
 ```shell

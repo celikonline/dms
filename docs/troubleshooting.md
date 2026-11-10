@@ -35,7 +35,7 @@ then you might need to install the [Tesseract language
 files](https://packages.ubuntu.com/search?keywords=tesseract-ocr)
 matching your document's languages.
 
-As an example, if you are running Paperless-ngx from any Ubuntu or
+As an example, if you are running Sense DMS from any Ubuntu or
 Debian box, and your documents are written in Spanish you may need to
 run:
 
@@ -266,7 +266,7 @@ You may see errors when deleting documents like:
 Data too long for column 'transaction_id' at row 1
 ```
 
-This error can occur in installations which have upgraded from a version of Paperless-ngx that used Django 4 (Paperless-ngx versions prior to v2.13.0) with a MariaDB/MySQL database. Due to the backwards-incompatible change in Django 5, the column "documents_document.transaction_id" will need to be re-created, which can be done with a one-time run of the following management command:
+This error can occur in installations which have upgraded from a version of Sense DMS that used Django 4 (Sense DMS versions prior to v2.13.0) with a MariaDB/MySQL database. Due to the backwards-incompatible change in Django 5, the column "documents_document.transaction_id" will need to be re-created, which can be done with a one-time run of the following management command:
 
 ```shell-session
 $ python3 manage.py convert_mariadb_uuid
@@ -312,13 +312,13 @@ DETAIL:  The database was created using collation version 2.36, but the operatin
 HINT:  Rebuild all objects in this database that use the default collation and run ALTER DATABASE paperless REFRESH COLLATION VERSION, or build PostgreSQL with the right library version.
 ```
 
-This comes from PostgreSQL, not Paperless-ngx. The `glibc` version that PostgreSQL
+This comes from PostgreSQL, not Sense DMS. The `glibc` version that PostgreSQL
 runs against changed, and the existing database was created with an older one. With
 Docker, `glibc` comes from the PostgreSQL image's Debian base, not the host, so this
 commonly happens when a new image is pulled after its base Debian release changed.
 If PostgreSQL is installed directly on a host, it uses the host's `glibc` instead.
 
-The warning is not an error and Paperless-ngx keeps working, but the database's text
+The warning is not an error and Sense DMS keeps working, but the database's text
 indexes may be built with outdated sorting rules. To resolve it, back up your
 database, then connect to it (for example with `psql -U paperless -d paperless`
 inside the database container) and run:
@@ -333,4 +333,4 @@ for example `postgres:18-trixie`, rather than `postgres:18`.
 
 ## Platform-Specific Deployment Troubleshooting
 
-A user-maintained wiki page is available to help troubleshoot issues that may arise when trying to deploy Paperless-ngx on specific platforms, for example SELinux. Please see [the wiki](https://github.com/paperless-ngx/paperless-ngx/wiki/Platform%E2%80%90Specific-Troubleshooting).
+A user-maintained wiki page is available to help troubleshoot issues that may arise when trying to deploy Sense DMS on specific platforms, for example SELinux. Please see [the wiki](https://github.com/paperless-ngx/paperless-ngx/wiki/Platform%E2%80%90Specific-Troubleshooting).

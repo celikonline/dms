@@ -1,7 +1,7 @@
 # Development
 
 This section describes the steps you need to take to start development
-on Paperless-ngx.
+on Sense DMS.
 
 Check out the source from GitHub. The repository is organized in the
 following way:
@@ -12,7 +12,7 @@ following way:
 - `feature-X` contains bigger changes that will be in some release, but
   not necessarily the next one.
 
-When making functional changes to Paperless-ngx, _always_ make your changes
+When making functional changes to Sense DMS, _always_ make your changes
 on the `dev` branch.
 
 Apart from that, the folder structure is as follows:
@@ -24,9 +24,9 @@ Apart from that, the folder structure is as follows:
   development.
 - `docker/` - Files required to build the docker image.
 
-## Contributing to Paperless-ngx
+## Contributing to Sense DMS
 
-Maybe you've been using Paperless-ngx for a while and want to add a feature
+Maybe you've been using Sense DMS for a while and want to add a feature
 or two, or maybe you've come across a bug that you have some ideas how
 to solve. The beauty of open source software is that you can see what's
 wrong and help to get it fixed for everyone!
@@ -254,7 +254,7 @@ that authentication is working.
 
 ## Localization
 
-Paperless-ngx is available in many different languages. Since Paperless-ngx
+Sense DMS is available in many different languages. Since Sense DMS
 consists both of a Django application and an Angular front end, both
 these parts have to be translated separately.
 
@@ -375,24 +375,24 @@ Make sure you have the `docker-buildx` package installed. Building the image wor
 docker build --file Dockerfile --tag paperless:local .
 ```
 
-## Extending Paperless-ngx
+## Extending Sense DMS
 
-Paperless-ngx supports third-party document parsers via a Python entry point
+Sense DMS supports third-party document parsers via a Python entry point
 plugin system. Plugins are distributed as ordinary Python packages and
-discovered automatically at startup — no changes to the Paperless-ngx source
+discovered automatically at startup — no changes to the Sense DMS source
 are required.
 
 !!! warning "Third-party plugins are not officially supported"
 
-    The Paperless-ngx maintainers do not provide support for third-party
+    The Sense DMS maintainers do not provide support for third-party
     plugins. Issues that are caused by or require changes to a third-party
     plugin will be closed without further investigation. If you believe you
-    have found a bug in Paperless-ngx itself (not in a plugin), please
+    have found a bug in Sense DMS itself (not in a plugin), please
     reproduce it with all third-party plugins removed before filing an issue.
 
 ### Making custom parsers
 
-Paperless-ngx uses parsers to add documents. A parser is responsible for:
+Sense DMS uses parsers to add documents. A parser is responsible for:
 
 - Extracting plain-text content from the document
 - Generating a thumbnail image
@@ -401,7 +401,7 @@ Paperless-ngx uses parsers to add documents. A parser is responsible for:
 
 Custom parsers are distributed as ordinary Python packages and registered
 via a [setuptools entry point](https://setuptools.pypa.io/en/latest/userguide/entry_point.html).
-No changes to the Paperless-ngx source are required.
+No changes to the Sense DMS source are required.
 
 #### 1. Implementing the parser class
 
@@ -425,7 +425,7 @@ class MyCustomParser:
 **Declaring supported MIME types**
 
 Return a `dict` mapping MIME type strings to preferred file extensions
-(including the leading dot). Paperless-ngx uses the extension when storing
+(including the leading dot). Sense DMS uses the extension when storing
 archive copies and serving files for download.
 
 ```python
@@ -472,7 +472,7 @@ class MyCustomParser:
     uses_remote_service = True
 ```
 
-Paperless-ngx excludes such parsers when the document being consumed has not
+Sense DMS excludes such parsers when the document being consumed has not
 been marked for remote processing, so users can keep remote OCR off by default
 and enable it selectively with a workflow. Parsers that do not declare the
 attribute are treated as fully local and are always considered.
@@ -495,7 +495,7 @@ def requires_pdf_rendition(self) -> bool:
 
 **Context manager — temp directory lifecycle**
 
-Paperless-ngx always uses parsers as context managers. Create a temporary
+Sense DMS always uses parsers as context managers. Create a temporary
 working directory in `__enter__` (or `__init__`) and remove it in `__exit__`
 regardless of whether an exception occurred. Store intermediate files,
 thumbnails, and archive PDFs inside this directory.
@@ -585,7 +585,7 @@ def get_text(self) -> str:
 
 def get_date(self) -> "datetime.datetime | None":
     # Return a datetime extracted from the document, or None to let
-    # Paperless-ngx use its default date-guessing logic.
+    # Sense DMS use its default date-guessing logic.
     return None
 
 
@@ -647,7 +647,7 @@ is an arbitrary name used only in log output; the value is the
 my_parser = "my_package.parsers:MyCustomParser"
 ```
 
-Install your package into the same Python environment as Paperless-ngx (or
+Install your package into the same Python environment as Sense DMS (or
 add it to the Docker image), and the parser will be discovered automatically
 on the next startup. No configuration changes are needed.
 
@@ -763,7 +763,7 @@ class XmlDocumentParser:
 
 ### Developing date parser plugins
 
-Paperless-ngx uses a plugin system for date parsing, allowing you to extend or replace the default date parsing behavior. Plugins are discovered using [Python entry points](https://setuptools.pypa.io/en/latest/userguide/entry_point.html).
+Sense DMS uses a plugin system for date parsing, allowing you to extend or replace the default date parsing behavior. Plugins are discovered using [Python entry points](https://setuptools.pypa.io/en/latest/userguide/entry_point.html).
 
 #### Creating a Date Parser Plugin
 
@@ -849,7 +849,7 @@ def _filter_date(
 
 ##### 3. Resource Management (Optional)
 
-If your plugin needs to acquire or release resources (database connections, API clients, etc.), override the context manager methods. Paperless-ngx will always use plugins as context managers, ensuring resources can be released even in the event of errors.
+If your plugin needs to acquire or release resources (database connections, API clients, etc.), override the context manager methods. Sense DMS will always use plugins as context managers, ensuring resources can be released even in the event of errors.
 
 ##### 4. Registering Your Plugin
 
@@ -860,11 +860,11 @@ Register your plugin using a setuptools entry point in your package's `pyproject
 my_parser = "my_package.parsers:MyDateParserPlugin"
 ```
 
-The entry point name (e.g., `"my_parser"`) is used for sorting when multiple plugins are found. Paperless-ngx will use the first plugin alphabetically by name if multiple plugins are discovered.
+The entry point name (e.g., `"my_parser"`) is used for sorting when multiple plugins are found. Sense DMS will use the first plugin alphabetically by name if multiple plugins are discovered.
 
 #### Plugin Discovery
 
-Paperless-ngx automatically discovers and loads date parser plugins at runtime. The discovery process:
+Sense DMS automatically discovers and loads date parser plugins at runtime. The discovery process:
 
 1. Queries the `paperless_ngx.date_parsers` entry point group
 2. Validates that each plugin is a subclass of `DateParserPluginBase`
@@ -918,7 +918,7 @@ non-standard "description" field).
 
 To get started:
 
-1. Clone the repository on your machine and open the Paperless-ngx folder in VS Code.
+1. Clone the repository on your machine and open the Sense DMS folder in VS Code.
 
 2. VS Code will prompt you with "Reopen in container". Do so and wait for the environment to start.
 

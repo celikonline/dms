@@ -2,7 +2,7 @@
 
 ## Reporting a Vulnerability
 
-The Paperless-ngx team and community take security issues seriously. We appreciate good-faith reports and will make every effort to review legitimate findings responsibly.
+The Sense DMS team and community take security issues seriously. We appreciate good-faith reports and will make every effort to review legitimate findings responsibly.
 
 To report a security issue, please use the GitHub Security Advisory ["Report a Vulnerability"](https://github.com/paperless-ngx/paperless-ngx/security/advisories/new) tab.
 
@@ -13,7 +13,7 @@ After the initial reply to your report, the team may ask for additional informat
 Please include as much of the following as possible:
 
 - A clear description of the issue and why it is a security vulnerability.
-- Affected Paperless-ngx version(s).
+- Affected Sense DMS version(s).
 - Required configuration, permissions, or preconditions.
 - Step-by-step reproduction instructions.
 - A realistic impact statement.
@@ -24,7 +24,7 @@ Reports that are specific, reproducible, and grounded in the actual behavior of 
 
 ## AI-assisted submissions
 
-AI tools can be useful for security research, but they can also produce plausible-sounding reports that do not reflect actual vulnerabilities in Paperless-ngx.
+AI tools can be useful for security research, but they can also produce plausible-sounding reports that do not reflect actual vulnerabilities in Sense DMS.
 
 If you use AI tools to help draft or investigate a report, please disclose this and verify the result yourself before submission. Make sure the report:
 
@@ -32,7 +32,7 @@ If you use AI tools to help draft or investigate a report, please disclose this 
 - includes a real reproduction, not just a theoretical concern
 - demonstrates realistic impact
 - accounts for existing permission checks, configuration requirements, and trust boundaries
-- is about Paperless-ngx itself, rather than a hypothetical deployment, downstream customization, third-party app, scanner output, reverse proxy behavior, or external service unless you can show a direct product vulnerability
+- is about Sense DMS itself, rather than a hypothetical deployment, downstream customization, third-party app, scanner output, reverse proxy behavior, or external service unless you can show a direct product vulnerability
 
 Submitting unverified AI-generated claims creates unnecessary review work and slows down handling of legitimate reports.
 
@@ -48,13 +48,13 @@ We may close reports that are:
 - dependent on administrator-controlled, explicitly optional, or knowingly unsafe configuration
 - based on privileges that already make the reported behavior expected
 - limited to unsupported versions
-- about third-party software, integrations, deployment choices, or client applications without a demonstrable Paperless-ngx vulnerability
+- about third-party software, integrations, deployment choices, or client applications without a demonstrable Sense DMS vulnerability
 - duplicates
 - UI bugs, feature requests, scanner quirks, or general usability issues submitted through the security channel
 
 ## Common non-vulnerability categories
 
-The following are not generally considered vulnerabilities unless accompanied by a concrete, reproducible impact in Paperless-ngx:
+The following are not generally considered vulnerabilities unless accompanied by a concrete, reproducible impact in Sense DMS:
 
 - password length inferred from masked mail-account passwords by users who already have permission to view the account, without disclosure of the password or token itself
 - disclosure limited to document IDs, existence, page counts, checksums, or modification/deletion timestamps, without access to document contents or an unintended privileged action
@@ -62,7 +62,7 @@ The following are not generally considered vulnerabilities unless accompanied by
 - large uploads or resource usage that do not bypass documented limits or privileges
 - IDOR / access control claims regarding the ability to attach an un-viewable object to a document. This is expected behavior.
 - claims based solely on the presence of a library, framework feature or code pattern without a working exploit
-- pickle deserialization of internal data from trusted components such as the Redis-compatible broker or Paperless-ngx data directory
+- pickle deserialization of internal data from trusted components such as the Redis-compatible broker or Sense DMS data directory
 - users with permission to edit users granting themselves additional privileges; this is expected behavior for that trusted permission
 - users with change permission on a mail account redirecting stored credentials to another mail server, including through connectivity tests. Mail account editing is a trusted permission, and UI password masking does not imply credential isolation from account editors
 - reports that rely on admin-level access, application-configuration access, workflow-editing privileges, shell access, or other high-trust roles unless they demonstrate an unintended privilege boundary bypass
@@ -80,7 +80,7 @@ A mistaken report made in good faith is not misconduct. However, users who repea
 
 ## Scope and expectations
 
-Please use the security reporting channel only for security vulnerabilities in Paperless-ngx.
+Please use the security reporting channel only for security vulnerabilities in Sense DMS.
 
 Please do not use the security advisory system for:
 
@@ -88,6 +88,6 @@ Please do not use the security advisory system for:
 - general bug reports
 - feature requests
 - browser compatibility issues
-- issues in third-party mobile apps, reverse proxies, or deployment tooling unless you can demonstrate a Paperless-ngx vulnerability
+- issues in third-party mobile apps, reverse proxies, or deployment tooling unless you can demonstrate a Sense DMS vulnerability
 
 The team will review reports as time permits, but submission does not guarantee that a report is valid, in scope, or will result in a fix. Reports that do not describe a reproducible product-level issue may be closed without extended back-and-forth.

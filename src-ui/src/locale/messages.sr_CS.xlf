@@ -269,13 +269,13 @@
         </context-group>
         <target state="translated">Zatvori</target>
       </trans-unit>
-      <trans-unit id="3527354815023530656" datatype="html">
-        <source>Document <x id="PH" equiv-text="status.filename"/> was added to Paperless-ngx.</source>
+      <trans-unit id="3493098133923225951" datatype="html">
+        <source>Document <x id="PH" equiv-text="status.filename"/> was added to Sense DMS.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.ts</context>
           <context context-type="linenumber">78</context>
         </context-group>
-        <target state="translated">Dokument <x id="PH" equiv-text="status.filename"/> je dodat u Paperless-ngx.</target>
+        <target state="translated">Dokument <x id="PH" equiv-text="status.filename"/> je dodat u Sense DMS.</target>
       </trans-unit>
       <trans-unit id="1931214133925051574" datatype="html">
         <source>Open document</source>
@@ -429,13 +429,13 @@
         </context-group>
         <target state="translated">Kontrolna tabla može se koristiti za prikaz sačuvanih prikaza, kao što je 'Prijemno sanduče'. Prikazi se nalaze pod Upravljanje &gt; Sačuvani prikazi nakon što ih kreirate.</target>
       </trans-unit>
-      <trans-unit id="9075755296812854717" datatype="html">
-        <source>Drag-and-drop documents here to start uploading or place them in the consume folder. You can also drag-and-drop documents anywhere on all other pages of the web app. Once you do, Paperless-ngx will start training its machine learning algorithms.</source>
+      <trans-unit id="733518200947037167" datatype="html">
+        <source>Drag-and-drop documents here to start uploading or place them in the consume folder. You can also drag-and-drop documents anywhere on all other pages of the web app. Once you do, Sense DMS will start training its machine learning algorithms.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.ts</context>
           <context context-type="linenumber">147</context>
         </context-group>
-        <target state="translated">Prevucite dokumente ovde da biste započeli otpremanje ili ih stavite u folder za obradu. Takođe možete da prevučete i obradite dokumente bilo gde na svim drugim stranicama veb aplikacije. Kada to učinite, Paperless-ngx će početi da trenira svoje algoritme za mašinsko učenje.</target>
+        <target state="translated">Prevucite dokumente ovde da biste započeli otpremanje ili ih stavite u folder za obradu. Takođe možete da prevučete i obradite dokumente bilo gde na svim drugim stranicama veb aplikacije. Kada to učinite, Sense DMS će početi da trenira svoje algoritme za mašinsko učenje.</target>
       </trans-unit>
       <trans-unit id="7495498057594070122" datatype="html">
         <source>The documents list shows all of your documents and allows for filtering as well as bulk-editing. There are three different view styles: list, small cards and large cards. A list of documents currently opened for editing is shown in the sidebar.</source>
@@ -521,13 +521,13 @@
         </context-group>
         <target state="translated">Ima &lt;em&gt;mnogo&lt;/em&gt; više funkcija i informacija koje ovde nismo pokrili, ali ovo bi trebalo da Vas pokrene. Pogledajte dokumentaciju ili posetite projekat na GitHub-u da biste saznali više ili prijavili probleme.</target>
       </trans-unit>
-      <trans-unit id="4270528545616947218" datatype="html">
-        <source>Lastly, on behalf of every contributor to this community-supported project, thank you for using Paperless-ngx!</source>
+      <trans-unit id="2955953185316801057" datatype="html">
+        <source>Lastly, on behalf of every contributor to this community-supported project, thank you for using Sense DMS!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.ts</context>
           <context context-type="linenumber">214</context>
         </context-group>
-        <target state="translated">Na kraju, u ime svih koji doprinose ovom projektu koji podržava zajednica, hvala Vam što koristite Paperless-ngx!</target>
+        <target state="translated">Na kraju, u ime svih koji doprinose ovom projektu koji podržava zajednica, hvala Vam što koristite Sense DMS!</target>
       </trans-unit>
       <trans-unit id="9063918187161876141" datatype="html">
         <source>Application Configuration</source>
@@ -537,13 +537,13 @@
         </context-group>
         <target state="translated">Konfiguracija Aplikacije</target>
       </trans-unit>
-      <trans-unit id="8528041182664173532" datatype="html">
-        <source>Global app configuration options which apply to &lt;strong&gt;every&lt;/strong&gt; user of this install of Paperless-ngx. Options can also be set using environment variables or the configuration file but the value here will always take precedence.</source>
+      <trans-unit id="8850177090155184236" datatype="html">
+        <source>Global app configuration options which apply to &lt;strong&gt;every&lt;/strong&gt; user of this install of Sense DMS. Options can also be set using environment variables or the configuration file but the value here will always take precedence.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/admin/config/config.component.html</context>
           <context context-type="linenumber">4,5</context>
         </context-group>
-        <target state="translated">Globalna konfiguracija koje se primjenjuju na &lt;strong&gt;svakog&lt;/strong&gt; korisnika ove instalacije Paperless-ngx. Opcije se takođe mogu postaviti pomoću varijabli okruženja ili konfiguracijske datoteke, ali će ova vrednost ovde uvek imati prednost.</target>
+        <target state="translated">Globalna konfiguracija koje se primjenjuju na &lt;strong&gt;svakog&lt;/strong&gt; korisnika ove instalacije Sense DMS. Opcije se takođe mogu postaviti pomoću varijabli okruženja ili konfiguracijske datoteke, ali će ova vrednost ovde uvek imati prednost.</target>
       </trans-unit>
       <trans-unit id="7991430199894172363" datatype="html">
         <source>Read the documentation about this setting</source>
@@ -553,21 +553,21 @@
         </context-group>
         <target state="translated">Pročitajte dokumentaciju o ovom podešavanju</target>
       </trans-unit>
-      <trans-unit id="7057826840809102816" datatype="html">
-        <source>This value overrides <x id="INTERPOLATION" equiv-text="{{option.config_key}}"/>, which is set outside Paperless.</source>
+      <trans-unit id="5187502250427960227" datatype="html">
+        <source>This value overrides <x id="INTERPOLATION" equiv-text="{{option.config_key}}"/>, which is set outside Sense DMS.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/admin/config/config.component.html</context>
           <context context-type="linenumber">35</context>
         </context-group>
-        <target state="needs-translation">This value overrides <x id="INTERPOLATION" equiv-text="{{option.config_key}}"/>, which is set outside Paperless.</target>
+        <target state="needs-translation">This value overrides <x id="INTERPOLATION" equiv-text="{{option.config_key}}"/>, which is set outside Sense DMS.</target>
       </trans-unit>
-      <trans-unit id="7221396516204435584" datatype="html">
-        <source><x id="INTERPOLATION" equiv-text="{{option.config_key}}"/> is set outside Paperless. Enter a value here to override it.</source>
+      <trans-unit id="5724981445022183275" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{option.config_key}}"/> is set outside Sense DMS. Enter a value here to override it.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/admin/config/config.component.html</context>
           <context context-type="linenumber">37</context>
         </context-group>
-        <target state="needs-translation"><x id="INTERPOLATION" equiv-text="{{option.config_key}}"/> is set outside Paperless. Enter a value here to override it.</target>
+        <target state="needs-translation"><x id="INTERPOLATION" equiv-text="{{option.config_key}}"/> is set outside Sense DMS. Enter a value here to override it.</target>
       </trans-unit>
       <trans-unit id="8318849619178340389" datatype="html">
         <source>Use the externally configured value</source>
@@ -1373,13 +1373,13 @@
         </context-group>
         <target state="translated">Prilagodi stranicu</target>
       </trans-unit>
-      <trans-unit id="7019985100624067992" datatype="html">
-        <source>Only applies to the Paperless-ngx PDF viewer.</source>
+      <trans-unit id="4130659808172846774" datatype="html">
+        <source>Only applies to the Sense DMS PDF viewer.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/admin/settings/settings.component.html</context>
           <context context-type="linenumber">246,247</context>
         </context-group>
-        <target state="translated">Primenjuje se samo na Paperless-ngx PDF pregledač</target>
+        <target state="translated">Primenjuje se samo na Sense DMS PDF pregledač</target>
       </trans-unit>
       <trans-unit id="2959590948110714366" datatype="html">
         <source>Automatically remove inbox tag(s) on save</source>
@@ -3777,13 +3777,13 @@
         </context-group>
         <target state="translated">Greška prilikom brisanja grupe "<x id="PH" equiv-text="group.name"/>".</target>
       </trans-unit>
-      <trans-unit id="7931334600001636863" datatype="html">
-        <source>by Paperless-ngx</source>
+      <trans-unit id="8581666098054916932" datatype="html">
+        <source>by Sense DMS</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/app-frame/app-frame.component.html</context>
           <context context-type="linenumber">24,25</context>
         </context-group>
-        <target state="translated">od Paperless-ngx</target>
+        <target state="translated">od Sense DMS</target>
       </trans-unit>
       <trans-unit id="3402055842664792382" datatype="html">
         <source>Upload documents</source>
@@ -4037,13 +4037,13 @@
         </context-group>
         <target state="translated">Klik za prеglеd.</target>
       </trans-unit>
-      <trans-unit id="9811291095862612" datatype="html">
-        <source>Paperless-ngx can automatically check for updates</source>
+      <trans-unit id="8804584737978791737" datatype="html">
+        <source>Sense DMS can automatically check for updates</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/app-frame/app-frame.component.html</context>
           <context context-type="linenumber">393</context>
         </context-group>
-        <target state="translated">Paperless-ngx može automatski da proveri da li postoje ažuriranja</target>
+        <target state="translated">Sense DMS može automatski da proveri da li postoje ažuriranja</target>
       </trans-unit>
       <trans-unit id="894819944961861800" datatype="html">
         <source> How does this work? </source>
@@ -5737,8 +5737,8 @@
         </context-group>
         <target state="translated">Zaustavite dalju obradu pravila ako ovo pravilo stavi bilo koji dokument u red čekanja.</target>
       </trans-unit>
-      <trans-unit id="4348351765075925931" datatype="html">
-        <source>Paperless will only process mails that match <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>all<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/> of the criteria specified below.</source>
+      <trans-unit id="7158444888214714760" datatype="html">
+        <source>Sense DMS will only process mails that match <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>all<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/> of the criteria specified below.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/edit-dialog/mail-rule-edit-dialog/mail-rule-edit-dialog.component.html</context>
           <context context-type="linenumber">32,33</context>
@@ -6197,13 +6197,13 @@
         </context-group>
         <target state="translated">Putanja</target>
       </trans-unit>
-      <trans-unit id="2816147949408898105" datatype="html">
-        <source>See &lt;a target=&apos;_blank&apos; href=&apos;https://docs.paperless-ngx.com/advanced_usage/#file-name-handling&apos;&gt;the documentation&lt;/a&gt;.</source>
+      <trans-unit id="5945132906057071944" datatype="html">
+        <source>See &lt;a target=&apos;_blank&apos; href=&apos;https://docsdms.algosense.com/advanced_usage/#file-name-handling&apos;&gt;the documentation&lt;/a&gt;.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/edit-dialog/storage-path-edit-dialog/storage-path-edit-dialog.component.html</context>
           <context context-type="linenumber">13</context>
         </context-group>
-        <target state="translated">Pogledaj &lt;a target='_blank' href='https://docs.paperless-ngx.com/advanced_usage/#file-name-handling'&gt;dokumentaciju&lt;/a&gt;.</target>
+        <target state="translated">Pogledaj &lt;a target='_blank' href='https://docsdms.algosense.com/advanced_usage/#file-name-handling'&gt;dokumentaciju&lt;/a&gt;.</target>
       </trans-unit>
       <trans-unit id="1295614462098694869" datatype="html">
         <source>Preview</source>
@@ -6761,13 +6761,13 @@
         </context-group>
         <target state="translated">Dodeli naslov</target>
       </trans-unit>
-      <trans-unit id="1098196422099517191" datatype="html">
-        <source>Can include some placeholders, see &lt;a target=&apos;_blank&apos; href=&apos;https://docs.paperless-ngx.com/usage/#workflows&apos;&gt;documentation&lt;/a&gt;.</source>
+      <trans-unit id="8001473968359665057" datatype="html">
+        <source>Can include some placeholders, see &lt;a target=&apos;_blank&apos; href=&apos;https://docsdms.algosense.com/usage/#workflows&apos;&gt;documentation&lt;/a&gt;.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/edit-dialog/workflow-edit-dialog/workflow-edit-dialog.component.html</context>
           <context context-type="linenumber">264</context>
         </context-group>
-        <target state="translated">Može uključivati neke placeholders, pogledaj &lt;a target='_blank' href='https://docs.paperless-ngx.com/usage/#workflows'&gt;dokumentaciju&lt;/a&gt;.</target>
+        <target state="translated">Može uključivati neke placeholders, pogledaj &lt;a target='_blank' href='https://docsdms.algosense.com/usage/#workflows'&gt;dokumentaciju&lt;/a&gt;.</target>
       </trans-unit>
       <trans-unit id="6528897010417701530" datatype="html">
         <source>Assign tags</source>
@@ -8863,13 +8863,13 @@
         </context-group>
         <target state="translated">Okruženje</target>
       </trans-unit>
-      <trans-unit id="5973078531069712831" datatype="html">
-        <source>Paperless-ngx Version</source>
+      <trans-unit id="8973568280751482017" datatype="html">
+        <source>Sense DMS Version</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/system-status-dialog/system-status-dialog.component.html</context>
           <context context-type="linenumber">22,23</context>
         </context-group>
-        <target state="translated">Paperless-ngx verzija</target>
+        <target state="translated">Sense DMS verzija</target>
       </trans-unit>
       <trans-unit id="4147180396067913855" datatype="html">
         <source>View version mismatch details</source>
@@ -9409,13 +9409,13 @@
         </context-group>
         <target state="translated">ili prevucite datoteke bilo gde</target>
       </trans-unit>
-      <trans-unit id="7915903586014997661" datatype="html">
-        <source>Paperless-ngx is running!</source>
+      <trans-unit id="5283488453879680776" datatype="html">
+        <source>Sense DMS is running!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/dashboard/widgets/welcome-widget/welcome-widget.component.html</context>
           <context context-type="linenumber">6</context>
         </context-group>
-        <target state="translated">Paperless-ngx je pokrenut!</target>
+        <target state="translated">Sense DMS je pokrenut!</target>
       </trans-unit>
       <trans-unit id="3326049540711826572" datatype="html">
         <source>You&apos;re ready to start uploading documents! Explore the various features of this web app on your own, or start a quick tour using the button below.</source>
@@ -9425,21 +9425,21 @@
         </context-group>
         <target state="translated">Spremni ste da počnete da otpremate dokumenta! Istražite različite funkcije ove veb aplikacije sami ili započnite brzi obilazak koristeći dugme ispod.</target>
       </trans-unit>
-      <trans-unit id="4474647174688421179" datatype="html">
-        <source>More detail on how to use and configure Paperless-ngx is always available in the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://docs.paperless-ngx.com&quot; target=&quot;_blank&quot;&gt;"/>documentation<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</source>
+      <trans-unit id="3120113398753436838" datatype="html">
+        <source>More detail on how to use and configure Sense DMS is always available in the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://docsdms.algosense.com&quot; target=&quot;_blank&quot;&gt;"/>documentation<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/dashboard/widgets/welcome-widget/welcome-widget.component.html</context>
           <context context-type="linenumber">9,10</context>
         </context-group>
-        <target state="translated">Više detalja o tome kako da koristite i konfigurišete Paperless-ngx je uvek dostupno u <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://docs.paperless-ngx.com&quot; target=&quot;_blank&quot;&gt;"/>dokumentaciji<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</target>
+        <target state="translated">Više detalja o tome kako da koristite i konfigurišete Sense DMS je uvek dostupno u <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://docsdms.algosense.com&quot; target=&quot;_blank&quot;&gt;"/>dokumentaciji<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</target>
       </trans-unit>
-      <trans-unit id="4294899532887357745" datatype="html">
-        <source>Thanks for being a part of the Paperless-ngx community!</source>
+      <trans-unit id="8711281742607592559" datatype="html">
+        <source>Thanks for being a part of the Sense DMS community!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/dashboard/widgets/welcome-widget/welcome-widget.component.html</context>
           <context context-type="linenumber">13,14</context>
         </context-group>
-        <target state="translated">Hvala Vam što ste deo Paperless-ngx zajednice!</target>
+        <target state="translated">Hvala Vam što ste deo Sense DMS zajednice!</target>
       </trans-unit>
       <trans-unit id="1415832194529539652" datatype="html">
         <source>Start the tour</source>
@@ -12978,13 +12978,13 @@
         </context-group>
         <target state="needs-translation">Bundles</target>
       </trans-unit>
-      <trans-unit id="1229748338333965418" datatype="html">
-        <source>Use workflows to customize the behavior of Paperless-ngx when events &apos;trigger&apos; a workflow.</source>
+      <trans-unit id="7509210388378139956" datatype="html">
+        <source>Use workflows to customize the behavior of Sense DMS when events &apos;trigger&apos; a workflow.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/manage/workflows/workflows.component.html</context>
           <context context-type="linenumber">4,5</context>
         </context-group>
-        <target state="translated">Koristite radne tokove za prilagođavanje ponašanja Paperless-ngx kada događaji 'pokrenu' radni tok.</target>
+        <target state="translated">Koristite radne tokove za prilagođavanje ponašanja Sense DMS kada događaji 'pokrenu' radni tok.</target>
       </trans-unit>
       <trans-unit id="2437630016855517844" datatype="html">
         <source>Add Workflow</source>

@@ -1,13 +1,13 @@
 [project]
 
-site_name = "Paperless-ngx"
-site_description = "Documentation for the Paperless-ngx document management system software."
-site_author = "the Paperless-ngx team"
+site_name = "Sense DMS"
+site_description = "Documentation for the Sense DMS document management system software."
+site_author = "the Sense DMS team"
 
-site_url = "https://docs.paperless-ngx.com/"
+site_url = "https://docsdms.algosense.com/"
 
 copyright = """
-Copyright &copy; 2016 - 2026 Daniel Quinn, Jonas Winkler, and the Paperless-ngx team
+Copyright &copy; 2016 - 2026 Daniel Quinn, Jonas Winkler, and the Sense DMS team
 """
 
 repo_url = "https://github.com/paperless-ngx/paperless-ngx"

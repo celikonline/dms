@@ -6,7 +6,7 @@ title: Setup
 
 !!! tip "Quick Start"
 
-    If you just want Paperless-ngx running quickly, use our installation script:
+    If you just want Sense DMS running quickly, use our installation script:
     ```shell-session
     bash -c "$(curl --location --silent --show-error https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/install-paperless-ngx.sh)"
     ```
@@ -37,7 +37,7 @@ for advanced users and contributors.
 
 ## Installation Script {#docker_script}
 
-Paperless-ngx provides an interactive script for Docker Compose setups.
+Sense DMS provides an interactive script for Docker Compose setups.
 It asks a few configuration questions, then creates the required files,
 pulls the image, starts the containers, and creates your [superuser](usage.md#superusers)
 account. In short, it automates the [Docker Compose setup](#docker) described below.
@@ -55,7 +55,7 @@ bash -c "$(curl --location --silent --show-error https://raw.githubusercontent.c
 
 #### After installation
 
-Paperless-ngx should be available at `http://127.0.0.1:8000` (or similar,
+Sense DMS should be available at `http://127.0.0.1:8000` (or similar,
 depending on your configuration) and you will be able to login with the
 credentials you provided during the installation script.
 
@@ -129,7 +129,7 @@ credentials you provided during the installation script.
 
 #### After installation
 
-Your Paperless-ngx instance should now be accessible at
+Your Sense DMS instance should now be accessible at
 `http://127.0.0.1:8000` (or similar, depending on your configuration).
 When you first access the web interface, you will be prompted to create
 a [superuser](usage.md#superusers) account.
@@ -156,7 +156,7 @@ Do not combine this with `USERMAP_UID` or `USERMAP_GID`, which are intended for 
 
 Some file systems, such as NFS network shares, don't support file system
 notifications with `inotify`. When the consumption directory is on such a
-file system, Paperless-ngx will not pick up new files with the default
+file system, Sense DMS will not pick up new files with the default
 configuration. Set [`PAPERLESS_CONSUMER_POLLING_INTERVAL`](configuration.md#PAPERLESS_CONSUMER_POLLING_INTERVAL)
 to a positive number to enable polling and disable native filesystem notifications.
 
@@ -165,7 +165,7 @@ to a positive number to enable polling and disable native filesystem notificatio
 #### Prerequisites
 
 - Paperless runs on Linux only, Windows is not supported.
-- Python 3.11, 3.12, 3.13, or 3.14 is required. As a policy, Paperless-ngx aims to support at least the three most recent Python versions and drops support for versions as they reach end-of-life. Newer versions may work, but some dependencies may not be fully compatible.
+- Python 3.11, 3.12, 3.13, or 3.14 is required. As a policy, Sense DMS aims to support at least the three most recent Python versions and drops support for versions as they reach end-of-life. Newer versions may work, but some dependencies may not be fully compatible.
 
 #### Installation
 
@@ -229,7 +229,7 @@ to a positive number to enable polling and disable native filesystem notificatio
     Redis) and configure it to start automatically.
 
 3.  Optional: Install `postgresql` and configure a database, user, and
-    password for Paperless-ngx. If you do not wish to use PostgreSQL,
+    password for Sense DMS. If you do not wish to use PostgreSQL,
     MariaDB and SQLite are available as well.
 
     !!! note
@@ -239,7 +239,7 @@ to a positive number to enable polling and disable native filesystem notificatio
         enabled. This is usually the case, but not always.
 
 4.  Create a system user with a new home folder in which you want
-    to run Paperless-ngx.
+    to run Sense DMS.
 
     ```shell-session
     adduser paperless --system --home /opt/paperless --group
@@ -273,9 +273,9 @@ to a positive number to enable polling and disable native filesystem notificatio
     compile the frontend yourself. See [here](development.md#front-end-development)
     and use the `build` step, not `serve`.
 
-6.  Configure Paperless-ngx. See [configuration](configuration.md) for details.
+6.  Configure Sense DMS. See [configuration](configuration.md) for details.
     Edit the included `paperless.conf` and adjust the settings to your
-    needs. Required settings for getting Paperless-ngx running are:
+    needs. Required settings for getting Sense DMS running are:
     - [`PAPERLESS_REDIS`](configuration.md#PAPERLESS_REDIS) should point to your broker, such as
       `redis://localhost:6379`.
     - [`PAPERLESS_DBENGINE`](configuration.md#PAPERLESS_DBENGINE) should be one of `postgresql`,
@@ -285,9 +285,9 @@ to a positive number to enable polling and disable native filesystem notificatio
       SQLite instead. Also configure port, database name, user and
       password as necessary.
     - [`PAPERLESS_CONSUMPTION_DIR`](configuration.md#PAPERLESS_CONSUMPTION_DIR) should point to the folder
-      that Paperless-ngx should watch for incoming documents.
+      that Sense DMS should watch for incoming documents.
       Likewise, [`PAPERLESS_DATA_DIR`](configuration.md#PAPERLESS_DATA_DIR) and
-      [`PAPERLESS_MEDIA_ROOT`](configuration.md#PAPERLESS_MEDIA_ROOT) define where Paperless-ngx stores its data.
+      [`PAPERLESS_MEDIA_ROOT`](configuration.md#PAPERLESS_MEDIA_ROOT) define where Sense DMS stores its data.
       If needed, these can point to the same directory.
     - [`PAPERLESS_SECRET_KEY`](configuration.md#PAPERLESS_SECRET_KEY) should be a random sequence of
       characters. It's used for authentication. Failure to do so
@@ -356,7 +356,7 @@ to a positive number to enable polling and disable native filesystem notificatio
     sudo -Hu paperless python3 manage.py migrate
     ```
 
-10. Optional: Test that Paperless-ngx is working by running
+10. Optional: Test that Sense DMS is working by running
 
     ```bash
     # Manually starts the webserver
@@ -364,7 +364,7 @@ to a positive number to enable polling and disable native filesystem notificatio
     ```
 
     Then point your browser to `http://localhost:8000` if
-    accessing from the same device on which Paperless-ngx is installed.
+    accessing from the same device on which Sense DMS is installed.
     If accessing from another machine, set up systemd services. You may need
     to set `PAPERLESS_DEBUG=true` in order for the development server to work
     normally in your browser.
@@ -380,7 +380,7 @@ to a positive number to enable polling and disable native filesystem notificatio
         This will not start the consumer. Paperless does this in a separate
         process.
 
-11. Set up systemd services to run Paperless-ngx automatically. You may use
+11. Set up systemd services to run Sense DMS automatically. You may use
     the service definition files included in the `scripts` folder as a
     starting point.
 
@@ -405,7 +405,7 @@ to a positive number to enable polling and disable native filesystem notificatio
     !!! note
 
         For instructions on using a reverse proxy,
-        [see the wiki](https://github.com/paperless-ngx/paperless-ngx/wiki/Using-a-Reverse-Proxy-with-Paperless-ngx#).
+        [see the wiki](https://github.com/paperless-ngx/paperless-ngx/wiki/Using-a-Reverse-Proxy-with-Sense DMS#).
 
     !!! warning
 
@@ -421,7 +421,7 @@ software has been patented until around 2017 and binary packages are not availab
 
 #### After installation
 
-Your Paperless-ngx instance should now be accessible at `http://localhost:8000` (or similar, depending on your configuration).
+Your Sense DMS instance should now be accessible at `http://localhost:8000` (or similar, depending on your configuration).
 When you first access the web interface you will be prompted to create a [superuser](usage.md#superusers) account.
 
 ## Build the Docker image yourself {#docker_build data-toc-label="Building the Docker image"}
@@ -430,20 +430,20 @@ Building the Docker image yourself is typically used for development, but it can
 if you want to customize the image. See [Building the Docker image](development.md#docker_build) in the
 development documentation.
 
-## Migrating to Paperless-ngx
+## Migrating to Sense DMS
 
-You can migrate to Paperless-ngx from Paperless-ng or from the original
+You can migrate to Sense DMS from Paperless-ng or from the original
 Paperless project.
 
 !!! note
 
-    Upgrading an existing Paperless-ngx installation from v2 to v3 has its own
+    Upgrading an existing Sense DMS installation from v2 to v3 has its own
     breaking changes and required steps. See the [v3 migration guide](migration-v3.md)
     before upgrading.
 
 <h3 id="migration_ng">Migrating from Paperless-ng</h3>
 
-Paperless-ngx is meant to be a drop-in replacement for Paperless-ng, and
+Sense DMS is meant to be a drop-in replacement for Paperless-ng, and
 upgrading should be trivial for most users, especially when using
 Docker. However, as with any major change, it is recommended to take a
 full backup first. Once you are ready, simply change the docker image to
@@ -471,7 +471,7 @@ and then pull the latest version.
 
 <h3 id="migration_paperless">Migrating from Paperless</h3>
 
-At its core, Paperless-ngx is still Paperless and fully compatible.
+At its core, Sense DMS is still Paperless and fully compatible.
 However, some things have changed under the hood, so you need to adapt
 your setup depending on how you installed Paperless.
 
@@ -481,7 +481,7 @@ installation. Keep these points in mind:
 - Read the [changelog](changelog.md) and
   take note of breaking changes.
 - Decide whether to stay on SQLite or migrate to PostgreSQL.
-  Both work fine with Paperless-ngx.
+  Both work fine with Sense DMS.
   However, if you already have a database server running
   for other services, you might as well use it for Paperless as well.
 - The task scheduler of Paperless, which is used to execute periodic
@@ -492,7 +492,7 @@ installation. Keep these points in mind:
   remains the same, so you can plug your old Docker volumes into
   paperless-ngx and expect it to find everything where it should be.
 
-Migration to Paperless-ngx is then performed in a few simple steps:
+Migration to Sense DMS is then performed in a few simple steps:
 
 1.  Stop Paperless.
 
@@ -505,19 +505,19 @@ Migration to Paperless-ngx is then performed in a few simple steps:
     have your data; and if you don't like paperless-ngx, you can
     switch back to Paperless.
 
-3.  Download the latest release of Paperless-ngx. You can either use
+3.  Download the latest release of Sense DMS. You can either use
     the Docker Compose files from
     [here](https://github.com/paperless-ngx/paperless-ngx/tree/main/docker/compose)
     or clone the repository to build the image yourself (see
     [development docs](development.md#docker_build)). You can either replace your current paperless
-    folder or put Paperless-ngx in
+    folder or put Sense DMS in
     a different location.
 
     !!! warning
 
-        Paperless-ngx includes a `.env` file. This will set the project name
+        Sense DMS includes a `.env` file. This will set the project name
         for Docker Compose to `paperless`, which will also define the
-        volume names created by Paperless-ngx. However, if you notice that
+        volume names created by Sense DMS. However, if you notice that
         paperless-ngx is not using your old paperless volumes, verify the
         names of your volumes with
 
@@ -547,15 +547,15 @@ Migration to Paperless-ngx is then performed in a few simple steps:
     ```
 
     This will migrate your database and create the search index. After
-    that, Paperless-ngx will maintain the index automatically.
+    that, Sense DMS will maintain the index automatically.
 
-8.  Start Paperless-ngx.
+8.  Start Sense DMS.
 
     ```bash
     docker compose up -d
     ```
 
-    This will run Paperless-ngx in the background and automatically start it
+    This will run Sense DMS in the background and automatically start it
     on system boot.
 
 9.  Paperless may have installed a permanent redirect to `admin/` in your
@@ -606,7 +606,7 @@ commands as well.
     if preferred.
 9.  Start the containers as before, using `docker compose`.
 
-## Running Paperless-ngx on less powerful devices {#less-powerful-devices data-toc-label="Less Powerful Devices"}
+## Running Sense DMS on less powerful devices {#less-powerful-devices data-toc-label="Less Powerful Devices"}
 
 Paperless runs on Raspberry Pi. Some tasks can be slow on lower-powered
 hardware, but a few settings can improve performance:
@@ -651,10 +651,10 @@ For details, refer to [configuration](configuration.md).
 
 ## Additional considerations
 
-**Using a reverse proxy with Paperless-ngx**
+**Using a reverse proxy with Sense DMS**
 
-Please see [the wiki](https://github.com/paperless-ngx/paperless-ngx/wiki/Using-a-Reverse-Proxy-with-Paperless-ngx#nginx) for user-maintained documentation on using nginx with Paperless-ngx.
+Please see [the wiki](https://github.com/paperless-ngx/paperless-ngx/wiki/Using-a-Reverse-Proxy-with-Sense DMS#nginx) for user-maintained documentation on using nginx with Sense DMS.
 
 **Enhancing security**
 
-Please see [the wiki](https://github.com/paperless-ngx/paperless-ngx/wiki/Using-Security-Tools-with-Paperless-ngx) for user-maintained documentation on configuring security tools like Fail2ban with Paperless-ngx.
+Please see [the wiki](https://github.com/paperless-ngx/paperless-ngx/wiki/Using-Security-Tools-with-Sense DMS) for user-maintained documentation on configuring security tools like Fail2ban with Sense DMS.

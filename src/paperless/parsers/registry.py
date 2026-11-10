@@ -1,6 +1,6 @@
 """
 Singleton registry that tracks all document parsers available to
-Paperless-ngx — both built-ins shipped with the application and third-party
+Sense DMS — both built-ins shipped with the application and third-party
 plugins installed via Python entrypoints.
 
 Public surface
@@ -178,7 +178,7 @@ class ParserRegistry:
     def register_builtin(self, parser_class: type[ParserProtocol]) -> None:
         """Register a built-in parser class.
 
-        Built-in parsers are shipped with Paperless-ngx and are appended to
+        Built-in parsers are shipped with Sense DMS and are appended to
         the _builtins list. They are never overridden by external parsers;
         instead, scoring determines which parser wins for any given file.
 
@@ -190,7 +190,7 @@ class ParserRegistry:
         self._builtins.append(parser_class)
 
     def register_defaults(self) -> None:
-        """Register the built-in parsers that ship with Paperless-ngx.
+        """Register the built-in parsers that ship with Sense DMS.
 
         Each parser that has been migrated to the new ParserProtocol interface
         is registered here.  Parsers are added in ascending weight order so

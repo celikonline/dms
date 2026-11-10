@@ -1,4 +1,4 @@
-"""Fixtures available to every Paperless-ngx app.
+"""Fixtures available to every Sense DMS app.
 
 Loaded automatically for every test path. Keep module-scope imports minimal:
 this file is imported for every session,  so anything heavy belongs inside

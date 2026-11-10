@@ -1,84 +1,196 @@
-{% extends "paperless-ngx/base.html" %}
-{% load i18n %}
+{% load i18n static %}<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Sense DMS - Doküman Yönetim Platformu</title>
+  <style>
+    :root {
+      --bg: #ffffff; --fg: #0b0d3b; --muted: #5b6478; --border: #d6dbe6;
+      --input-bg: #ffffff; --accent: #1f8f55; --accent-hover: #187545;
+      --note-bg: #f1f4f8; --error-bg: #fdecec; --error-fg: #a12622;
+    }
+    :root[data-theme="dark"] {
+      --bg: #0e1020; --fg: #f1f3fb; --muted: #9aa3bd; --border: #2b3050;
+      --input-bg: #171a30; --accent: #2fae6a; --accent-hover: #45c27f;
+      --note-bg: #171a30; --error-bg: #3a1618; --error-fg: #ffb4b0;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body { font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; background: var(--bg); color: var(--fg); display: flex; min-height: 100vh; }
 
-{% block head_title %}
-    {% trans "Paperless-ngx sign in" %}
-{% endblock head_title %}
+    /* Sol marka paneli */
+    .brand { position: relative; flex: 0 0 46%; max-width: 46%; overflow: hidden; color: #fff; padding: 48px; display: flex; flex-direction: column; justify-content: space-between;
+      background: linear-gradient(155deg, #0a3320 0%, #12502f 50%, #1d7a48 100%); }
+    .brand::before { content: ""; position: absolute; inset: 0; opacity: .35;
+      background-image: radial-gradient(rgba(255,255,255,.55) 1px, transparent 1.2px); background-size: 22px 22px; }
+    .brand .shape { position: absolute; border-radius: 56px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); transform: rotate(-12deg); }
+    .brand .shape.a { width: 360px; height: 360px; right: -90px; bottom: 90px; }
+    .brand .shape.b { width: 380px; height: 300px; left: -40px; bottom: -80px; background: rgba(47,174,106,.28); }
+    .brand > * { position: relative; z-index: 1; }
+    .logo { display: flex; align-items: center; gap: 12px; }
+    .logo .mark { width: 48px; height: 44px; display: grid; place-items: center; filter: drop-shadow(0 4px 10px rgba(0,0,0,.3)); }
+    .logo .name { font-weight: 700; font-size: 22px; line-height: 1; }
+    .logo .by { font-size: 10px; letter-spacing: .12em; opacity: .7; margin-top: 4px; }
+    .pitch h2 { font-size: 34px; line-height: 1.2; margin: 0 0 14px; max-width: 420px; }
+    .pitch p { margin: 0 0 22px; opacity: .85; max-width: 420px; }
+    .pitch ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+    .pitch li { display: flex; align-items: center; gap: 10px; font-size: 15px; }
+    .pitch li::before { content: "✓"; width: 22px; height: 22px; border-radius: 50%; background: rgba(255,255,255,.18); display: grid; place-items: center; font-size: 12px; }
+    .copy { font-size: 12px; opacity: .8; }
 
-{% block form_top_content %}
-    <p>
-      {% translate "Please sign in." %}
-      {% if ACCOUNT_ALLOW_SIGNUPS %}
-          <br/>{% translate "Don't have an account yet?" %} <a href="{{ signup_url }}">{% translate "Sign up" %}</a>
-      {% endif %}
-    </p>
-{% endblock form_top_content %}
+    /* Sağ form alanı */
+    .main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 32px; position: relative; }
+    .toggle { position: absolute; top: 24px; right: 24px; width: 36px; height: 36px; border: 1px solid var(--border); background: var(--input-bg); color: var(--fg); border-radius: 6px; cursor: pointer; font-size: 16px; }
+    form { width: 100%; max-width: 300px; }
+    @media (min-width: 1200px) { form { max-width: 300px; } }
+    .rule { width: 26px; height: 3px; background: var(--accent); margin-bottom: 18px; }
+    h1 { font-size: 26px; margin: 0 0 8px; }
+    .sub { color: var(--muted); font-size: 13px; margin: 0 0 26px; }
+    label { display: block; font-weight: 600; font-size: 14px; margin-bottom: 8px; }
+    .field { margin-bottom: 18px; position: relative; }
+    input[type=text], input[type=password] { width: 100%; height: 42px; padding: 0 40px 0 12px; border: 1px solid var(--border); background: var(--input-bg); color: var(--fg); border-radius: 3px; font-size: 14px; font-family: inherit; }
+    input:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-color: var(--accent); }
+    .eye { position: absolute; right: 8px; bottom: 6px; width: 30px; height: 30px; border: 0; background: none; color: var(--muted); cursor: pointer; font-size: 16px; }
+    .forgot { display: block; text-align: right; font-size: 13px; font-weight: 600; color: var(--fg); text-decoration: none; margin: -6px 0 22px; }
+    .forgot:hover { text-decoration: underline; }
+    .btn { width: 100%; height: 42px; border: 0; border-radius: 3px; background: var(--accent); color: #fff; font-weight: 700; font-size: 14px; cursor: pointer; font-family: inherit; }
+    .btn:hover { background: var(--accent-hover); }
+    .btn.secondary { background: var(--note-bg); color: var(--fg); border: 1px solid var(--border); margin-top: 10px; }
+    .alert { background: var(--error-bg); color: var(--error-fg); padding: 10px 12px; border-radius: 3px; font-size: 13px; margin-bottom: 18px; }
+    .alert.info { background: var(--note-bg); color: var(--fg); }
+    .help { text-align: center; color: var(--muted); font-size: 13px; margin: 26px 0 0; }
+    .or { text-align: center; color: var(--muted); font-size: 13px; margin: 20px 0 4px; }
+    ul.sso { list-style: none; margin: 0; padding: 0; }
 
-{% block form_content %}
-		{% if FIRST_INSTALL and not DISABLE_REGULAR_LOGIN %}
-			<script type="text/javascript">
-				// forward to the signup page if no users exist
-				window.location.href = "{{ signup_url }}";
-			</script>
-		{% endif %}
-    {% if not DISABLE_REGULAR_LOGIN %}
-        {% translate "Username" as i18n_username %}
-        {% translate "Password" as i18n_password %}
-        <div class="form-floating form-stacked-top">
-            <input type="text" name="login" id="inputUsername" placeholder="{{ i18n_username|force_escape }}" class="form-control" autocorrect="off" autocapitalize="none" required autofocus>
-            <label for="inputUsername">{{ i18n_username|force_escape }}</label>
-        </div>
-        <div class="form-floating form-stacked-bottom">
-            <input type="password" name="password" id="inputPassword" placeholder="{{ i18n_password|force_escape }}" class="form-control" required>
-            <label for="inputPassword">{{ i18n_password|force_escape }}</label>
-        </div>
-        <div class="d-grid mt-3">
-            <button class="btn btn-lg btn-primary" type="submit">{% translate "Sign in" %}</button>
-        </div>
-        {% if EMAIL_ENABLED %}
-            <div class="d-grid mt-3">
-              <a class="btn btn-link" href="{% url 'account_reset_password' %}">{% translate "Forgot your password?" %}</a>
-            </div>
-        {% endif %}
+    @media (max-width: 860px) {
+      body { flex-direction: column; }
+      .brand { flex: none; max-width: none; padding: 28px; }
+      .pitch, .copy, .brand .shape { display: none; }
+      .main { padding: 40px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <aside class="brand">
+    <div class="logo">
+      <div class="mark">
+        {% include "paperless-ngx/snippets/svg_leaf.html" with extra_attrs="width='48' height='44'" %}
+      </div>
+      <div>
+        <div class="name">Sense DMS</div>
+        <div class="by">ALGOSENSE GÜVENCESİYLE</div>
+      </div>
+    </div>
+    <div class="pitch">
+      <h2>Tüm dokümanlarınız, tek ekranda.</h2>
+      <p>Belge arşivi, OCR, etiketleme ve arama süreçlerinizi tek bir platformdan yönetin.</p>
+      <ul>
+        <li>Belge tarama &amp; OCR</li>
+        <li>Etiket, ilgili kişi &amp; belge türü yönetimi</li>
+        <li>Hızlı tam metin arama</li>
+      </ul>
+    </div>
+    <div class="shape a"></div><div class="shape b"></div>
+    <div class="copy">© 2026 Algosense Yazılım. Tüm hakları saklıdır.</div>
+  </aside>
+
+  <main class="main">
+    <button class="toggle" type="button" id="themeToggle" aria-label="Tema">◐</button>
+
+    {% if FIRST_INSTALL and not DISABLE_REGULAR_LOGIN %}
+      <script>window.location.href = "{{ signup_url }}";</script>
     {% endif %}
-{% endblock form_content %}
 
-{% block after_form_content %}
-    {% load allauth socialaccount %}
-    {% get_providers as socialaccount_providers %}
-    {% if socialaccount_providers %}
+    <div style="width:100%;max-width:300px">
+      <form method="post" id="form-account">
+        {% csrf_token %}
+        <div class="rule"></div>
+        <h1>Tekrar hoş geldiniz</h1>
+        <p class="sub">Devam etmek için hesabınıza giriş yapın.</p>
+
+        {% for message in messages %}
+          <div class="alert {% if message.level_tag == 'success' or message.level_tag == 'info' %}info{% endif %}" role="alert">{{ message }}</div>
+        {% endfor %}
+        {% if form.errors %}
+          <div class="alert" role="alert">
+            {% for field, errors in form.errors.items %}{% for error in errors %}{{ error }} {% endfor %}{% endfor %}
+          </div>
+        {% elif request.GET.sharelink_notfound %}
+          <div class="alert" role="alert">Paylaşım bağlantısı bulunamadı.</div>
+        {% elif request.GET.sharelink_expired %}
+          <div class="alert" role="alert">Paylaşım bağlantısının süresi dolmuş.</div>
+        {% endif %}
+
         {% if not DISABLE_REGULAR_LOGIN %}
-            <p class="mt-3">{% translate "or sign in via" %}</p>
+          <div class="field">
+            <label for="inputUsername">Kullanıcı adı</label>
+            <input type="text" name="login" id="inputUsername" placeholder="Kullanıcı adınızı girin" autocorrect="off" autocapitalize="none" required autofocus>
+          </div>
+          <div class="field">
+            <label for="inputPassword">Şifre</label>
+            <input type="password" name="password" id="inputPassword" placeholder="Şifrenizi girin" required>
+            <button type="button" class="eye" id="eye" aria-label="Şifreyi göster">👁</button>
+          </div>
+          {% if EMAIL_ENABLED %}
+            <a class="forgot" href="{% url 'account_reset_password' %}">Şifremi Unuttum</a>
+          {% else %}
+            <div style="height:6px"></div>
+          {% endif %}
+          <button class="btn" type="submit">Giriş Yap &nbsp;→</button>
         {% endif %}
-        <ul class="m-0 p-0">
-            {% for provider in socialaccount_providers %}
-                {% if provider.id == "openid" %}
-                    {% for brand in provider.get_brands %}
-                        {% provider_login_url provider openid=brand.openid_url process=process as href %}
-                    <li class="d-grid mt-3"><a class="btn btn-secondary oidc-url" href="{{ href }}">{{ brand.name }}</a></li>
-                    {% endfor %}
-                {% else %}
-                    {% provider_login_url provider process=process scope=scope auth_params=auth_params as href %}
-                        <li class="d-grid mt-3">
-                            <form id="social-login" class="d-grid" method="POST" action="{{ href }}">
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-secondary">{{ provider.name }}</button>
-                            </form>
-                        </li>
-                    {% if REDIRECT_LOGIN_TO_SSO and forloop.counter0 == 0 and request.GET.loggedout != '1' %}
-                        <script type="text/javascript">
-                            const form = document.getElementById('social-login');
-                            if (form) {
-                                form.submit();
-                            } else {
-                                if (document.getElementsByClassName('oidc-url').length > 0) {
-                                    document.getElementsByClassName('oidc-url')[0].click();
-                                }
-                            }
-                        </script>
-                    {% endif %}
-                {% endif %}
-            {% endfor %}
+      </form>
+
+      {% load allauth socialaccount %}
+      {% get_providers as socialaccount_providers %}
+      {% if socialaccount_providers %}
+        {% if not DISABLE_REGULAR_LOGIN %}<p class="or">veya şununla giriş yapın</p>{% endif %}
+        <ul class="sso">
+          {% for provider in socialaccount_providers %}
+            {% if provider.id == "openid" %}
+              {% for brand in provider.get_brands %}
+                {% provider_login_url provider openid=brand.openid_url process=process as href %}
+                <li><a class="btn secondary oidc-url" style="display:block;text-align:center;line-height:40px;text-decoration:none" href="{{ href }}">{{ brand.name }}</a></li>
+              {% endfor %}
+            {% else %}
+              {% provider_login_url provider process=process scope=scope auth_params=auth_params as href %}
+              <li>
+                <form id="social-login" method="POST" action="{{ href }}">
+                  {% csrf_token %}
+                  <button type="submit" class="btn secondary">{{ provider.name }}</button>
+                </form>
+              </li>
+              {% if REDIRECT_LOGIN_TO_SSO and forloop.counter0 == 0 and request.GET.loggedout != '1' %}
+                <script>
+                  const f = document.getElementById('social-login');
+                  if (f) { f.submit(); }
+                  else if (document.getElementsByClassName('oidc-url').length > 0) { document.getElementsByClassName('oidc-url')[0].click(); }
+                </script>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
         </ul>
-    {% endif %}
-{% endblock after_form_content %}
+      {% endif %}
+
+      <p class="help">
+        {% if ACCOUNT_ALLOW_SIGNUPS %}Hesabınız yok mu? <a href="{{ signup_url }}">Kayıt olun</a>{% else %}Hesabınız yok mu? Sistem yöneticinizle iletişime geçin.{% endif %}
+      </p>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      var root = document.documentElement, key = 'sensedms-theme';
+      try { var t = localStorage.getItem(key); if (t) root.setAttribute('data-theme', t); } catch (e) {}
+      document.getElementById('themeToggle').addEventListener('click', function () {
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem(key, next); } catch (e) {}
+      });
+      var pw = document.getElementById('inputPassword'), eye = document.getElementById('eye');
+      if (eye && pw) eye.addEventListener('click', function () { pw.type = pw.type === 'password' ? 'text' : 'password'; });
+    })();
+  </script>
+</body>
+</html>

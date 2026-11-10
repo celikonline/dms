@@ -1,0 +1,8 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body{font-family:Segoe UI;margin:20px;background:#eee}.row{display:flex;gap:24px;align-items:center;margin-bottom:14px;padding:14px}
+.light{background:#fff}.dark{background:#16181d}.green{background:#17541f}
+.light .text{fill:#212529!important}.dark .text{fill:#dee2e6!important}.green .text{fill:#fff!important}
+</style></head><body><div id="out"></div><script>
+Promise.all(['logo.svg','mark.svg','mark-color.svg','icon.svg','icon-maskable.svg'].map(f=>fetch(f).then(r=>r.text()))).then(([logo,m,mc,icon,mask])=>{
+ for (const c of ['light','dark','green']) out.insertAdjacentHTML('beforeend',`<div class="row ${c}"><div>${logo.replace('<svg','<svg style="height:70px"')}</div><div>${logo.replace('<svg','<svg style="height:34px"')}</div><div style="color:${c==='light'?'#17541f':'#7fd39a'}">${m.replace('<svg','<svg style="width:64px"')}</div><div>${mc.replace('<svg','<svg style="width:96px"')}</div><div>${icon.replace('<svg','<svg style="width:32px"')}</div><div>${icon.replace('<svg','<svg style="width:16px"')}</div><div>${mask.replace('<svg','<svg style="width:64px"')}</div></div>`)})
+</script></body></html>

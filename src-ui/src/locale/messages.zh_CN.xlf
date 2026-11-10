@@ -269,13 +269,13 @@
         </context-group>
         <target state="translated">关闭</target>
       </trans-unit>
-      <trans-unit id="3527354815023530656" datatype="html">
-        <source>Document <x id="PH" equiv-text="status.filename"/> was added to Paperless-ngx.</source>
+      <trans-unit id="3493098133923225951" datatype="html">
+        <source>Document <x id="PH" equiv-text="status.filename"/> was added to Sense DMS.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.ts</context>
           <context context-type="linenumber">78</context>
         </context-group>
-        <target state="translated">文档 <x id="PH" equiv-text="status.filename"/> 已添加到 Paperless-ngx。</target>
+        <target state="translated">文档 <x id="PH" equiv-text="status.filename"/> 已添加到 Sense DMS。</target>
       </trans-unit>
       <trans-unit id="1931214133925051574" datatype="html">
         <source>Open document</source>
@@ -429,13 +429,13 @@
         </context-group>
         <target state="translated">仪表盘可以用于显示保存的视图，例如收件箱。 一旦你创建了一些视图，就能在设置 &gt; 保存的视图中找到它们。</target>
       </trans-unit>
-      <trans-unit id="9075755296812854717" datatype="html">
-        <source>Drag-and-drop documents here to start uploading or place them in the consume folder. You can also drag-and-drop documents anywhere on all other pages of the web app. Once you do, Paperless-ngx will start training its machine learning algorithms.</source>
+      <trans-unit id="733518200947037167" datatype="html">
+        <source>Drag-and-drop documents here to start uploading or place them in the consume folder. You can also drag-and-drop documents anywhere on all other pages of the web app. Once you do, Sense DMS will start training its machine learning algorithms.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.ts</context>
           <context context-type="linenumber">147</context>
         </context-group>
-        <target state="translated">拖放文档到此处开始上传或将其放置在消费文件夹中。 你也可以在网页所有其他页面上随时拖放文档。一旦你这样做，Paperless ngx 将开始培训它的机器学习算法。</target>
+        <target state="translated">拖放文档到此处开始上传或将其放置在消费文件夹中。 你也可以在网页所有其他页面上随时拖放文档。一旦你这样做，Sense DMS 将开始培训它的机器学习算法。</target>
       </trans-unit>
       <trans-unit id="7495498057594070122" datatype="html">
         <source>The documents list shows all of your documents and allows for filtering as well as bulk-editing. There are three different view styles: list, small cards and large cards. A list of documents currently opened for editing is shown in the sidebar.</source>
@@ -521,13 +521,13 @@
         </context-group>
         <target state="translated">这里还有&lt;em&gt;大量&lt;/em&gt;我们未涉及的功能和信息，但这些应该足以让你入门。请查看文档或访问 GitHub 上的项目以了解更多信息或报告问题。</target>
       </trans-unit>
-      <trans-unit id="4270528545616947218" datatype="html">
-        <source>Lastly, on behalf of every contributor to this community-supported project, thank you for using Paperless-ngx!</source>
+      <trans-unit id="2955953185316801057" datatype="html">
+        <source>Lastly, on behalf of every contributor to this community-supported project, thank you for using Sense DMS!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.ts</context>
           <context context-type="linenumber">214</context>
         </context-group>
-        <target state="translated">最后，代表社区支持项目的每个贡献者，感谢你使用 Paperless-ngx！</target>
+        <target state="translated">最后，代表社区支持项目的每个贡献者，感谢你使用 Sense DMS！</target>
       </trans-unit>
       <trans-unit id="9063918187161876141" datatype="html">
         <source>Application Configuration</source>
@@ -537,13 +537,13 @@
         </context-group>
         <target state="translated">应用配置</target>
       </trans-unit>
-      <trans-unit id="8528041182664173532" datatype="html">
-        <source>Global app configuration options which apply to &lt;strong&gt;every&lt;/strong&gt; user of this install of Paperless-ngx. Options can also be set using environment variables or the configuration file but the value here will always take precedence.</source>
+      <trans-unit id="8850177090155184236" datatype="html">
+        <source>Global app configuration options which apply to &lt;strong&gt;every&lt;/strong&gt; user of this install of Sense DMS. Options can also be set using environment variables or the configuration file but the value here will always take precedence.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/admin/config/config.component.html</context>
           <context context-type="linenumber">4,5</context>
         </context-group>
-        <target state="translated">适用于 &lt;strong&gt;的全局应用程序配置选项。此安装的 Paperless-ngx 的每个&lt;/strong&gt; 用户。 也可以使用环境变量或配置文件来设置选项，但此处的值总是优先。</target>
+        <target state="translated">适用于 &lt;strong&gt;的全局应用程序配置选项。此安装的 Sense DMS 的每个&lt;/strong&gt; 用户。 也可以使用环境变量或配置文件来设置选项，但此处的值总是优先。</target>
       </trans-unit>
       <trans-unit id="7991430199894172363" datatype="html">
         <source>Read the documentation about this setting</source>
@@ -553,21 +553,21 @@
         </context-group>
         <target state="translated">阅读关于此设置的文档</target>
       </trans-unit>
-      <trans-unit id="7057826840809102816" datatype="html">
-        <source>This value overrides <x id="INTERPOLATION" equiv-text="{{option.config_key}}"/>, which is set outside Paperless.</source>
+      <trans-unit id="5187502250427960227" datatype="html">
+        <source>This value overrides <x id="INTERPOLATION" equiv-text="{{option.config_key}}"/>, which is set outside Sense DMS.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/admin/config/config.component.html</context>
           <context context-type="linenumber">35</context>
         </context-group>
-        <target state="needs-translation">This value overrides <x id="INTERPOLATION" equiv-text="{{option.config_key}}"/>, which is set outside Paperless.</target>
+        <target state="needs-translation">This value overrides <x id="INTERPOLATION" equiv-text="{{option.config_key}}"/>, which is set outside Sense DMS.</target>
       </trans-unit>
-      <trans-unit id="7221396516204435584" datatype="html">
-        <source><x id="INTERPOLATION" equiv-text="{{option.config_key}}"/> is set outside Paperless. Enter a value here to override it.</source>
+      <trans-unit id="5724981445022183275" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{option.config_key}}"/> is set outside Sense DMS. Enter a value here to override it.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/admin/config/config.component.html</context>
           <context context-type="linenumber">37</context>
         </context-group>
-        <target state="needs-translation"><x id="INTERPOLATION" equiv-text="{{option.config_key}}"/> is set outside Paperless. Enter a value here to override it.</target>
+        <target state="needs-translation"><x id="INTERPOLATION" equiv-text="{{option.config_key}}"/> is set outside Sense DMS. Enter a value here to override it.</target>
       </trans-unit>
       <trans-unit id="8318849619178340389" datatype="html">
         <source>Use the externally configured value</source>
@@ -1373,13 +1373,13 @@
         </context-group>
         <target state="translated">适应页面</target>
       </trans-unit>
-      <trans-unit id="7019985100624067992" datatype="html">
-        <source>Only applies to the Paperless-ngx PDF viewer.</source>
+      <trans-unit id="4130659808172846774" datatype="html">
+        <source>Only applies to the Sense DMS PDF viewer.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/admin/settings/settings.component.html</context>
           <context context-type="linenumber">246,247</context>
         </context-group>
-        <target state="translated">仅适用于Paperless-ngx PDF 查看器。</target>
+        <target state="translated">仅适用于Sense DMS PDF 查看器。</target>
       </trans-unit>
       <trans-unit id="2959590948110714366" datatype="html">
         <source>Automatically remove inbox tag(s) on save</source>
@@ -3777,13 +3777,13 @@
         </context-group>
         <target state="translated">删除群组 "<x id="PH" equiv-text="group.name"/> "时发生错误。</target>
       </trans-unit>
-      <trans-unit id="7931334600001636863" datatype="html">
-        <source>by Paperless-ngx</source>
+      <trans-unit id="8581666098054916932" datatype="html">
+        <source>by Sense DMS</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/app-frame/app-frame.component.html</context>
           <context context-type="linenumber">24,25</context>
         </context-group>
-        <target state="translated">by Paperless-ngx</target>
+        <target state="translated">by Sense DMS</target>
       </trans-unit>
       <trans-unit id="3402055842664792382" datatype="html">
         <source>Upload documents</source>
@@ -4037,13 +4037,13 @@
         </context-group>
         <target state="translated">点击查看</target>
       </trans-unit>
-      <trans-unit id="9811291095862612" datatype="html">
-        <source>Paperless-ngx can automatically check for updates</source>
+      <trans-unit id="8804584737978791737" datatype="html">
+        <source>Sense DMS can automatically check for updates</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/app-frame/app-frame.component.html</context>
           <context context-type="linenumber">393</context>
         </context-group>
-        <target state="translated">Paperless-ngx 可以自动检查更新</target>
+        <target state="translated">Sense DMS 可以自动检查更新</target>
       </trans-unit>
       <trans-unit id="894819944961861800" datatype="html">
         <source> How does this work? </source>
@@ -5737,13 +5737,13 @@
         </context-group>
         <target state="translated">如果此规则将文档放入队列，则停止处理其他规则。</target>
       </trans-unit>
-      <trans-unit id="4348351765075925931" datatype="html">
-        <source>Paperless will only process mails that match <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>all<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/> of the criteria specified below.</source>
+      <trans-unit id="7158444888214714760" datatype="html">
+        <source>Sense DMS will only process mails that match <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>all<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/> of the criteria specified below.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/edit-dialog/mail-rule-edit-dialog/mail-rule-edit-dialog.component.html</context>
           <context context-type="linenumber">32,33</context>
         </context-group>
-        <target state="translated">Paperless-ngx 只会处理符合以下所有过滤规则的邮件。</target>
+        <target state="translated">Sense DMS 只会处理符合以下所有过滤规则的邮件。</target>
       </trans-unit>
       <trans-unit id="7046259383943324039" datatype="html">
         <source>Folder</source>
@@ -6197,13 +6197,13 @@
         </context-group>
         <target state="translated">路径</target>
       </trans-unit>
-      <trans-unit id="2816147949408898105" datatype="html">
-        <source>See &lt;a target=&apos;_blank&apos; href=&apos;https://docs.paperless-ngx.com/advanced_usage/#file-name-handling&apos;&gt;the documentation&lt;/a&gt;.</source>
+      <trans-unit id="5945132906057071944" datatype="html">
+        <source>See &lt;a target=&apos;_blank&apos; href=&apos;https://docsdms.algosense.com/advanced_usage/#file-name-handling&apos;&gt;the documentation&lt;/a&gt;.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/edit-dialog/storage-path-edit-dialog/storage-path-edit-dialog.component.html</context>
           <context context-type="linenumber">13</context>
         </context-group>
-        <target state="translated">请参阅 &lt;a target='_blank' href='https://docs.paperless-ngx.com/advanced_usage/#file-name-handling'&gt;文档&lt;/a&gt;。</target>
+        <target state="translated">请参阅 &lt;a target='_blank' href='https://docsdms.algosense.com/advanced_usage/#file-name-handling'&gt;文档&lt;/a&gt;。</target>
       </trans-unit>
       <trans-unit id="1295614462098694869" datatype="html">
         <source>Preview</source>
@@ -6761,13 +6761,13 @@
         </context-group>
         <target state="translated">指定标题</target>
       </trans-unit>
-      <trans-unit id="1098196422099517191" datatype="html">
-        <source>Can include some placeholders, see &lt;a target=&apos;_blank&apos; href=&apos;https://docs.paperless-ngx.com/usage/#workflows&apos;&gt;documentation&lt;/a&gt;.</source>
+      <trans-unit id="8001473968359665057" datatype="html">
+        <source>Can include some placeholders, see &lt;a target=&apos;_blank&apos; href=&apos;https://docsdms.algosense.com/usage/#workflows&apos;&gt;documentation&lt;/a&gt;.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/edit-dialog/workflow-edit-dialog/workflow-edit-dialog.component.html</context>
           <context context-type="linenumber">264</context>
         </context-group>
-        <target state="translated">可以包含一些占位符，请参阅 &lt;a target='_blank' href='https://docs.paperless-ngx.com/usage/#workflows'&gt;文档&lt;/a&gt;。</target>
+        <target state="translated">可以包含一些占位符，请参阅 &lt;a target='_blank' href='https://docsdms.algosense.com/usage/#workflows'&gt;文档&lt;/a&gt;。</target>
       </trans-unit>
       <trans-unit id="6528897010417701530" datatype="html">
         <source>Assign tags</source>
@@ -8863,13 +8863,13 @@
         </context-group>
         <target state="translated">系统环境</target>
       </trans-unit>
-      <trans-unit id="5973078531069712831" datatype="html">
-        <source>Paperless-ngx Version</source>
+      <trans-unit id="8973568280751482017" datatype="html">
+        <source>Sense DMS Version</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/common/system-status-dialog/system-status-dialog.component.html</context>
           <context context-type="linenumber">22,23</context>
         </context-group>
-        <target state="translated">Paperless-ngx 版本</target>
+        <target state="translated">Sense DMS 版本</target>
       </trans-unit>
       <trans-unit id="4147180396067913855" datatype="html">
         <source>View version mismatch details</source>
@@ -9409,13 +9409,13 @@
         </context-group>
         <target state="translated">或将文件拖放到任意位置</target>
       </trans-unit>
-      <trans-unit id="7915903586014997661" datatype="html">
-        <source>Paperless-ngx is running!</source>
+      <trans-unit id="5283488453879680776" datatype="html">
+        <source>Sense DMS is running!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/dashboard/widgets/welcome-widget/welcome-widget.component.html</context>
           <context context-type="linenumber">6</context>
         </context-group>
-        <target state="translated">Paperless-ngx 正在运行！</target>
+        <target state="translated">Sense DMS 正在运行！</target>
       </trans-unit>
       <trans-unit id="3326049540711826572" datatype="html">
         <source>You&apos;re ready to start uploading documents! Explore the various features of this web app on your own, or start a quick tour using the button below.</source>
@@ -9425,21 +9425,21 @@
         </context-group>
         <target state="translated">你可以开始上传文档了！请自行探索此网页应用的各种功能，或使用下面的按钮开始快速导览。</target>
       </trans-unit>
-      <trans-unit id="4474647174688421179" datatype="html">
-        <source>More detail on how to use and configure Paperless-ngx is always available in the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://docs.paperless-ngx.com&quot; target=&quot;_blank&quot;&gt;"/>documentation<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</source>
+      <trans-unit id="3120113398753436838" datatype="html">
+        <source>More detail on how to use and configure Sense DMS is always available in the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://docsdms.algosense.com&quot; target=&quot;_blank&quot;&gt;"/>documentation<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/dashboard/widgets/welcome-widget/welcome-widget.component.html</context>
           <context context-type="linenumber">9,10</context>
         </context-group>
-        <target state="translated">更多关于如何使用和配置Paperless-ngx的详细信息可以在 <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://docs.paperless-ngx.com&quot; target=&quot;_blank&quot;&gt;"/>文档<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> 中找到。</target>
+        <target state="translated">更多关于如何使用和配置Sense DMS的详细信息可以在 <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://docsdms.algosense.com&quot; target=&quot;_blank&quot;&gt;"/>文档<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> 中找到。</target>
       </trans-unit>
-      <trans-unit id="4294899532887357745" datatype="html">
-        <source>Thanks for being a part of the Paperless-ngx community!</source>
+      <trans-unit id="8711281742607592559" datatype="html">
+        <source>Thanks for being a part of the Sense DMS community!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/dashboard/widgets/welcome-widget/welcome-widget.component.html</context>
           <context context-type="linenumber">13,14</context>
         </context-group>
-        <target state="translated">感谢你成为 Paperless-ngx 社区的一部分！</target>
+        <target state="translated">感谢你成为 Sense DMS 社区的一部分！</target>
       </trans-unit>
       <trans-unit id="1415832194529539652" datatype="html">
         <source>Start the tour</source>
@@ -12977,13 +12977,13 @@
         </context-group>
         <target state="translated">捆绑包</target>
       </trans-unit>
-      <trans-unit id="1229748338333965418" datatype="html">
-        <source>Use workflows to customize the behavior of Paperless-ngx when events &apos;trigger&apos; a workflow.</source>
+      <trans-unit id="7509210388378139956" datatype="html">
+        <source>Use workflows to customize the behavior of Sense DMS when events &apos;trigger&apos; a workflow.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/manage/workflows/workflows.component.html</context>
           <context context-type="linenumber">4,5</context>
         </context-group>
-        <target state="translated">使用工作流来自定义当事件触发工作流时 Paperless-ngx 的行为。</target>
+        <target state="translated">使用工作流来自定义当事件触发工作流时 Sense DMS 的行为。</target>
       </trans-unit>
       <trans-unit id="2437630016855517844" datatype="html">
         <source>Add Workflow</source>

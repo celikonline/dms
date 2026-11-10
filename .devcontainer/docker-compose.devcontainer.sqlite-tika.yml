@@ -1,5 +1,5 @@
-# Docker Compose file for developing Paperless NGX in VSCode DevContainers.
-# This file contains everything Paperless NGX needs to run.
+# Docker Compose file for developing Sense DMS in VSCode DevContainers.
+# This file contains everything Sense DMS needs to run.
 # Paperless supports amd64, arm, and arm64 hardware.
 # All compose files of Paperless configure it in the following way:
 #
@@ -14,7 +14,7 @@
 # In addition, this Docker Compose file adds the following optional
 # configurations:
 #
-# - Apache Tika and Gotenberg servers are started with Paperless NGX and Paperless
+# - Apache Tika and Gotenberg servers are started with Sense DMS and Paperless
 #   is configured to use these services. These provide support for consuming
 #   Office documents (Word, Excel, PowerPoint, and their LibreOffice counterparts).
 #

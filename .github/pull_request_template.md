@@ -23,7 +23,7 @@ Closes #(issue or discussion)
 ## Type of change
 
 <!--
-What type of change does your PR introduce to Paperless-ngx?
+What type of change does your PR introduce to Sense DMS?
 NOTE: Please check only one box!
 -->
 
@@ -40,9 +40,9 @@ NOTE: PRs that do not address the following will not be merged, please do not sk
 -->
 
 - [ ] I have read & agree with the [contributing guidelines](https://github.com/paperless-ngx/paperless-ngx/blob/main/CONTRIBUTING.md).
-- [ ] If applicable, I have included testing coverage for new code in this PR, for [backend](https://docs.paperless-ngx.com/development/#testing) and / or [front-end](https://docs.paperless-ngx.com/development/#testing-and-code-style) changes.
+- [ ] If applicable, I have included testing coverage for new code in this PR, for [backend](https://docsdms.algosense.com/development/#testing) and / or [front-end](https://docsdms.algosense.com/development/#testing-and-code-style) changes.
 - [ ] If applicable, I have tested my code for breaking changes & regressions on both mobile & desktop devices, using the latest version of major browsers.
-- [ ] If applicable, I have checked that all tests pass, see [documentation](https://docs.paperless-ngx.com/development/#back-end-development).
-- [ ] I have run all Git `pre-commit` hooks, see [documentation](https://docs.paperless-ngx.com/development/#code-formatting-with-pre-commit-hooks).
+- [ ] If applicable, I have checked that all tests pass, see [documentation](https://docsdms.algosense.com/development/#back-end-development).
+- [ ] I have run all Git `pre-commit` hooks, see [documentation](https://docsdms.algosense.com/development/#code-formatting-with-pre-commit-hooks).
 - [ ] I have made corresponding changes to the documentation as needed.
 - [ ] In the description of the PR above I have clearly disclosed any use of AI tools or agents in the creation of this PR. I understand that failing to do so is a violation of the [Code of Conduct](https://github.com/paperless-ngx/paperless-ngx/blob/main/CODE_OF_CONDUCT.md).

@@ -40,9 +40,9 @@ describe('MarkdownPipe', () => {
   })
 
   it('should render safe links with target and rel', () => {
-    const html = pipe.transform('[docs](https://docs.paperless-ngx.com "Docs")')
+    const html = pipe.transform('[docs](https://docsdms.algosense.com "Docs")')
     expect(html).toContain(
-      '<a target="_blank" rel="noopener noreferrer nofollow" href="https://docs.paperless-ngx.com" title="Docs">docs</a>'
+      '<a target="_blank" rel="noopener noreferrer nofollow" href="https://docsdms.algosense.com" title="Docs">docs</a>'
     )
     expect(pipe.transform('[mail](mailto:a@b.c)')).toContain(
       'href="mailto:a@b.c"'
@@ -66,12 +66,12 @@ describe('MarkdownPipe', () => {
   it('should show the actual hostname beside web links with misleading labels', () => {
     for (const protocol of ['http', 'https']) {
       const html = pipe.transform(
-        `[docs.paperless-ngx.com](${protocol}://docs.paperless-ngx.com@otherdomain.example/path?secret=1)`
+        `[docsdms.algosense.com](${protocol}://docsdms.algosense.com@otherdomain.example/path?secret=1)`
       )
       expect(html).toContain(
         '</a> <span class="text-muted small">(otherdomain.example)</span>'
       )
-      expect(html).not.toContain('(docs.paperless-ngx.com)')
+      expect(html).not.toContain('(docsdms.algosense.com)')
     }
   })
 

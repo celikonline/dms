@@ -251,11 +251,11 @@ def check_v3_minimum_upgrade_version(
 
     return [
         Error(
-            "Cannot upgrade to Paperless-ngx v3 from this version.",
+            "Cannot upgrade to Sense DMS v3 from this version.",
             hint=(
                 "Upgrading to v3 can only be performed from v2.20.15. "
                 "Please upgrade to v2.20.15, run migrations, then upgrade to v3. "
-                "See https://docs.paperless-ngx.com/setup/#upgrading for details."
+                "See https://docsdms.algosense.com/setup/#upgrading for details."
             ),
             id="paperless.E002",
         ),
@@ -292,7 +292,7 @@ def check_deprecated_db_settings(
                 hint=(
                     f"{var_name} is deprecated. "
                     f"Set the equivalent option via PAPERLESS_DB_OPTIONS instead. "
-                    "See https://docs.paperless-ngx.com/migration-v3/ for the full reference."
+                    "See https://docsdms.algosense.com/migration-v3/ for the full reference."
                 ),
                 id="paperless.W001",
             ),

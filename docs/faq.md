@@ -4,9 +4,9 @@ title: FAQs
 
 # Frequently Asked Questions
 
-## _What's the general plan for Paperless-ngx?_
+## _What's the general plan for Sense DMS?_
 
-**A:** While Paperless-ngx is already considered largely
+**A:** While Sense DMS is already considered largely
 "feature-complete", it is a community-driven project and development
 will be guided in this way. New features can be submitted via
 [GitHub discussions](https://github.com/paperless-ngx/paperless-ngx/discussions)
@@ -44,7 +44,7 @@ system. On Linux, chances are high that this location is
 You can always drag those files out of that folder to use them
 elsewhere. Here are a couple notes about that.
 
-- Paperless-ngx never modifies your original documents. It keeps
+- Sense DMS never modifies your original documents. It keeps
   checksums of all documents and uses a scheduled sanity checker to
   check that they remain the same.
 - By default, paperless uses the internal ID of each document as its
@@ -63,11 +63,11 @@ elsewhere. Here are a couple notes about that.
   WebP images are processed with OCR and converted into PDF documents.
 - Plain text documents are supported as well and are added verbatim to
   paperless.
-- With the optional Tika integration enabled (see [Tika configuration](https://docs.paperless-ngx.com/configuration#tika)),
+- With the optional Tika integration enabled (see [Tika configuration](https://docsdms.algosense.com/configuration#tika)),
   Paperless also supports various Office documents (.docx, .doc, odt,
   .ppt, .pptx, .odp, .xls, .xlsx, .ods).
 
-Paperless-ngx determines the type of a file by inspecting its content
+Sense DMS determines the type of a file by inspecting its content
 rather than its file extensions. However, files processed via the
 consumption directory will be rejected if they have a file extension that
 is not supported by any of the available parsers.
@@ -100,7 +100,7 @@ has to do much less work to serve the data.
 ## _How do I install paperless-ngx on Raspberry Pi?_
 
 **A:** Docker images are available for arm64 hardware, so just
-follow the [Docker Compose instructions](https://docs.paperless-ngx.com/setup/#installation). Apart from more required disk
+follow the [Docker Compose instructions](https://docsdms.algosense.com/setup/#installation). Apart from more required disk
 space compared to a bare metal installation, docker comes with close to
 zero overhead, even on Raspberry Pi.
 
@@ -118,7 +118,7 @@ libraries and compilation will take a long time.
 
 ## _How do I run this on Unraid?_
 
-**A:** Paperless-ngx is available as [community
+**A:** Sense DMS is available as [community
 app](https://unraid.net/community/apps?q=paperless-ngx) in Unraid. [Uli
 Fahrer](https://github.com/Tooa) created a container template for that.
 
@@ -129,9 +129,9 @@ able to run paperless, you're a bit on your own. If you can't run the
 docker image, the documentation has instructions for bare metal
 installs.
 
-## _Does Paperless-ngx use AI, and is my data private?_
+## _Does Sense DMS use AI, and is my data private?_
 
-**A:** Paperless-ngx includes optional AI features — LLM-based suggestions, document chat,
+**A:** Sense DMS includes optional AI features — LLM-based suggestions, document chat,
 and similar-document retrieval — that are **disabled by default**. They only run when you
 enable them and configure an LLM backend. The built-in tag/correspondent suggestions use a
 local, non-LLM machine-learning model and do not send your data anywhere. If you enable the
@@ -141,7 +141,7 @@ fully local backend (e.g. Ollama) or a remote provider. See
 
 ## _Which message broker should I use_?
 
-Paperless-ngx talks to a Redis-compatible message broker, so any broker that
+Sense DMS talks to a Redis-compatible message broker, so any broker that
 implements the Redis protocol will work. The bundled Docker Compose files
 default to [Valkey](https://valkey.io/), the open-source fork created after
 Redis' licensing change, but Redis itself and other wire-compatible brokers

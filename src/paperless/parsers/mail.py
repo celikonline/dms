@@ -58,7 +58,7 @@ _SUPPORTED_MIME_TYPES: dict[str, str] = {
 
 
 class MailDocumentParser:
-    """Parse .eml email files for Paperless-ngx.
+    """Parse .eml email files for Sense DMS.
 
     Uses imap_tools to parse .eml files, generates a PDF using Gotenberg,
     and sends the HTML part to a Tika server for text extraction.  Because
@@ -76,16 +76,16 @@ class MailDocumentParser:
     name : str
         Human-readable parser name.
     version : str
-        Semantic version string, kept in sync with Paperless-ngx releases.
+        Semantic version string, kept in sync with Sense DMS releases.
     author : str
         Maintainer name.
     url : str
         Issue tracker / source URL.
     """
 
-    name: str = "Paperless-ngx Mail Parser"
+    name: str = "Sense DMS Mail Parser"
     version: str = __full_version_str__
-    author: str = "Paperless-ngx Contributors"
+    author: str = "Sense DMS Contributors"
     url: str = "https://github.com/paperless-ngx/paperless-ngx"
 
     # ------------------------------------------------------------------

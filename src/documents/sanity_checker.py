@@ -1,5 +1,5 @@
 """
-Sanity checker for the Paperless-ngx document archive.
+Sanity checker for the Sense DMS document archive.
 
 Verifies that all documents have valid files, correct checksums,
 and consistent metadata. Reports orphaned files in the media directory.

@@ -56,7 +56,7 @@ _SUPPORTED_MIME_TYPES: dict[str, str] = {
 
 
 class TikaDocumentParser:
-    """Parse Office documents via Apache Tika and Gotenberg for Paperless-ngx.
+    """Parse Office documents via Apache Tika and Gotenberg for Sense DMS.
 
     Text extraction is handled by the Tika server.  PDF conversion for display
     is handled by Gotenberg (LibreOffice route).  Because the source formats
@@ -75,16 +75,16 @@ class TikaDocumentParser:
     name : str
         Human-readable parser name.
     version : str
-        Semantic version string, kept in sync with Paperless-ngx releases.
+        Semantic version string, kept in sync with Sense DMS releases.
     author : str
         Maintainer name.
     url : str
         Issue tracker / source URL.
     """
 
-    name: str = "Paperless-ngx Tika Parser"
+    name: str = "Sense DMS Tika Parser"
     version: str = __full_version_str__
-    author: str = "Paperless-ngx Contributors"
+    author: str = "Sense DMS Contributors"
     url: str = "https://github.com/paperless-ngx/paperless-ngx"
 
     # ------------------------------------------------------------------

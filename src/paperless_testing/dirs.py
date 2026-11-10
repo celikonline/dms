@@ -1,4 +1,4 @@
-"""The Paperless-ngx temp directory layout, stated once.
+"""The Sense DMS temp directory layout, stated once.
 
 ``build_paperless_dirs`` owns where things go and creates them.
 ``dirs_settings`` owns the mapping onto Django setting names and is pure.
@@ -23,7 +23,7 @@ if TYPE_CHECKING:
 
 @dataclass(frozen=True, slots=True)
 class PaperlessDirs:
-    """Standard Paperless-ngx directory layout for tests."""
+    """Standard Sense DMS directory layout for tests."""
 
     data_dir: Path
     scratch_dir: Path

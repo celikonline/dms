@@ -2294,7 +2294,7 @@ class PostDocumentSerializer(serializers.Serializer[dict[str, Any]]):
     )
 
     from_webui = serializers.BooleanField(
-        label="Documents are from Paperless-ngx WebUI",
+        label="Documents are from Sense DMS WebUI",
         write_only=True,
         required=False,
     )

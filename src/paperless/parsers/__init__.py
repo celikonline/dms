@@ -1,9 +1,9 @@
 """
-Public interface for the Paperless-ngx parser plugin system.
+Public interface for the Sense DMS parser plugin system.
 
 This module defines ParserProtocol — the structural contract that every
 document parser must satisfy, whether it is a built-in parser shipped with
-Paperless-ngx or a third-party parser installed via a Python entrypoint.
+Sense DMS or a third-party parser installed via a Python entrypoint.
 
 Phase 1/2 scope: only the Protocol is defined here. The transitional
 DocumentParser ABC (Phase 3) and concrete built-in parsers (Phase 3+) will
@@ -115,7 +115,7 @@ class ParserContext:
 
 @runtime_checkable
 class ParserProtocol(Protocol):
-    """Structural contract for all Paperless-ngx document parsers.
+    """Structural contract for all Sense DMS document parsers.
 
     Both built-in parsers and third-party plugins (discovered via the
     "paperless_ngx.parsers" entrypoint group) must satisfy this Protocol.

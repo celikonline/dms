@@ -1,6 +1,6 @@
 # REST API
 
-Paperless-ngx now ships with a fully-documented REST API and a browsable
+Sense DMS now ships with a fully-documented REST API and a browsable
 web interface to explore it. The API browsable interface is available at
 `/api/schema/view/`.
 

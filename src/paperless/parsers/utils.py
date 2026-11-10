@@ -1,5 +1,5 @@
 """
-Shared utilities for Paperless-ngx document parsers.
+Shared utilities for Sense DMS document parsers.
 
 Functions here are format-neutral helpers that multiple parsers need.
 Keeping them here avoids parsers inheriting from each other just to
